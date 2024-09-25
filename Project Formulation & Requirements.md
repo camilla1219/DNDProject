@@ -4,6 +4,15 @@ The objective of this project is to develop an online survey generator that enab
 
 This tool is intended to provide a seamless experience for students, educators, and professionals who need to gather feedback, conduct research, or collect data. Similar to existing platforms like SurveyMonkey, this survey generator will be tailored for student use, focusing on simplicity, ease of use, and cost-effectiveness.
 
+### Objective:
+* Develop a web-based platform for creating, managing, and distributing surveys. The platform will enable users to design surveys, view analytics, and share results, all through RESTful APIs and web services.
+
+### Technologies:
+* C# for backend services
+* RESTful API for interaction between frontend and backend
+* Blazer for web application
+* Database for storing survey data and responses (e.g., MySQL, PostgreSQL)
+
 ## Why we chose this project:
 
 We chose this project because it presents new challenges that push our technical capabilities while remaining manageable in terms of scope and difficulty. We've previously worked with database integration and connecting user interfaces to backend systems, but this project adds an exciting new layer of complexity with the introduction of real-time data visualization for survey results. We also aimed to develop something practical that we, as students, could benefit from—whether for gathering feedback, conducting research, or collaborating on academic projects. This blend of familiar and new challenges makes the survey generator both a practical and engaging endeavor.
