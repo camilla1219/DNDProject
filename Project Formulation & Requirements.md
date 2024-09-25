@@ -33,7 +33,7 @@ This tool is intended to provide a seamless experience for students, educators, 
 
 ### Survey Expiration and Closing:
 * As a user I would like to be able to set an expiration date/manually close my survey when I no longer need it, so that I can close my survey when I’ve gathered the desired number of answers.
-* As a user I would like the surveys to not accept new answers after I’ve closed them to not skew the results after I’ve run them
+* As a user I would like the surveys to not accept new answers after I’ve closed them to not skew the results after I’ve run them.
 
 ### Objective:
 * Develop a web-based platform for creating, managing, and distributing surveys. The platform will enable users to design surveys, view analytics, and share results, all through RESTful APIs and web services.
