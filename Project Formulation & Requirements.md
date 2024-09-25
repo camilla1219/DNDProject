@@ -12,10 +12,10 @@ This tool is intended to provide a seamless experience for students, educators, 
 * Users must be able to reset their password via username.
 
 ### Survey Creation:
-* Users should be able to create new surveys from their dashboard.
-* Surveys should have a customizable title, description, and cover image .
-* Users can define different types of questions:
-* Allow users to set optional or required questions.
+* As a user, I want to be able to create new surveys from the dashboard or home page, so that I can be efficient and fast.
+* As a user, I want for surveys to have a customizable title, description, and cover image, so that I can personalize the seurvey to my needs, requirements and topics.
+* As a user, I want to define different types of questions, so that I can diferentiate between quantitative or qualititative questions.
+* As a user, I want to be allowed to set optional or required questions, so that I can allow certain questions to be skipped if they are optional or force certain questions to be answered if they are obligatory or needed.
 
 ### Survey Distribution:
 * As a user I would like to share my surveys via a unique URL so that I can easily share my surveys and gather more answers.
