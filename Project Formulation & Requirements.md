@@ -17,10 +17,10 @@ This tool is intended to provide a seamless experience for students, educators, 
 * Users can define different types of questions:
 * Allow users to set optional or required questions.
 
-### User Registration and Login:
-* Allow users to share surveys via a unique URL.
-* Provide email invitations with an embedded survey link.
-
+### Survey Distribution:
+* As a user I would like to share my surveys via a unique URL so that I can easily share my surveys and gather more answers.
+* As a user I would like to share my surveys through email invitations so that I can share my surveys with my colleagues.
+  
 ### Survey Response Management:
 * Responses must be stored in the database, tagged by survey ID and user ID (if logged in)
 * Support for both anonymous and identified (logged-in) responses.
@@ -32,8 +32,8 @@ This tool is intended to provide a seamless experience for students, educators, 
 * Allow users to export results as CSV, Excel, or PDF files.
 
 ### Survey Expiration and Closing:
-* Users must be able to set an expiration date for a survey or manually close it.
-* After expiration, the survey should not accept new responses.
+* As a user I would like to be able to set an expiration date/manually close my survey when I no longer need it, so that I can close my survey when I’ve gathered the desired number of answers.
+* As a user I would like the surveys to not accept new answers after I’ve closed them to not skew the results after I’ve run them
 
 ### Objective:
 * Develop a web-based platform for creating, managing, and distributing surveys. The platform will enable users to design surveys, view analytics, and share results, all through RESTful APIs and web services.
