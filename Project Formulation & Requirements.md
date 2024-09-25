@@ -14,4 +14,12 @@ This tool is intended to provide a seamless experience for students, educators, 
 * Surveys should have a customizable title, description, and cover image .
 * Users can define different types of questions:
 * Allow users to set optional or required questions.
-  
+
+## User Registration and Login:
+* Allow users to share surveys via a unique URL.
+* Provide email invitations with an embedded survey link.
+
+## Survey Response Management:
+* Responses must be stored in the database, tagged by survey ID and user ID (if logged in)
+* Support for both anonymous and identified (logged-in) responses.
+* Ensure that users cannot submit the same survey more than once (unless specified by the survey creator).
