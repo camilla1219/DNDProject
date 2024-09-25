@@ -22,9 +22,9 @@ This tool is intended to provide a seamless experience for students, educators, 
 * As a user I would like to share my surveys through email invitations so that I can share my surveys with my colleagues.
   
 ### Survey Response Management:
-* Responses must be stored in the database, tagged by survey ID and user ID (if logged in)
-* Support for both anonymous and identified (logged-in) responses.
-* Ensure that users cannot submit the same survey more than once (unless specified by the survey creator).
+* As a user, I want to have my responses saved in a database along with my user ID and the survey ID (if I’m logged in), so that I can submit my answers securely and retrieve them later if needed, while associating them with the correct survey.
+* As a user, I want to be able to submit responses either anonymously or while logged in, so that I can choose to either associate my responses with my user account or submit them privately.
+* As a user, I want to be prevented from submitting the same survey multiple times, unless the survey creator allows multiple submissions, so that I can only submit valid responses and avoid duplicate entries.
 
 ### Data Analysis and Reporting:
 * As a user, I want to view the results of each survey on my dashboard, so that I can quickly analyze the feedback in a visual format.
