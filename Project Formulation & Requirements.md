@@ -4,6 +4,8 @@ The objective of this project is to develop an online survey generator that enab
 
 This tool is intended to provide a seamless experience for students, educators, and professionals who need to gather feedback, conduct research, or collect data. Similar to existing platforms like SurveyMonkey, this survey generator will be tailored for student use, focusing on simplicity, ease of use, and cost-effectiveness.
 
+# Initial Requirements
+
 ### User Registration and Login:
 * Users must be able to create accounts using username and password
 * Passwords should be securely hashed and stored.
