@@ -24,11 +24,11 @@ This tool is intended to provide a seamless experience for students, educators, 
 * Support for both anonymous and identified (logged-in) responses.
 * Ensure that users cannot submit the same survey more than once (unless specified by the survey creator).
 
-* ## Data Analysis and Reporting:
+## Data Analysis and Reporting:
 * Users should be able to view the results of each survey through their dashboard.
 * Pie charts, bar graphs, and line charts.
 * Allow users to export results as CSV, Excel, or PDF files.
 
-* ## Survey Expiration and Closing:
+## Survey Expiration and Closing:
 * Users must be able to set an expiration date for a survey or manually close it.
 * After expiration, the survey should not accept new responses.
