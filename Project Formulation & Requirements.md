@@ -27,9 +27,9 @@ This tool is intended to provide a seamless experience for students, educators, 
 * Ensure that users cannot submit the same survey more than once (unless specified by the survey creator).
 
 ### Data Analysis and Reporting:
-* Users should be able to view the results of each survey through their dashboard.
-* Pie charts, bar graphs, and line charts.
-* Allow users to export results as CSV, Excel, or PDF files.
+* As a user, I want to view the results of each survey on my dashboard, so that I can quickly analyze the feedback in a visual format.
+* As a user, I want to see the survey results displayed in pie charts, bar graphs, and line charts, so that I can easily interpret the data.
+* As a user, I want to export survey results as CSV, Excel, or PDF files, so that I can further analyze or share the data with others.
 
 ### Survey Expiration and Closing:
 * As a user I would like to be able to set an expiration date/manually close my survey when I no longer need it, so that I can close my survey when I’ve gathered the desired number of answers.
