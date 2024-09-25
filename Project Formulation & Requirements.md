@@ -4,31 +4,41 @@ The objective of this project is to develop an online survey generator that enab
 
 This tool is intended to provide a seamless experience for students, educators, and professionals who need to gather feedback, conduct research, or collect data. Similar to existing platforms like SurveyMonkey, this survey generator will be tailored for student use, focusing on simplicity, ease of use, and cost-effectiveness.
 
-## User Registration and Login:
+### User Registration and Login:
 * Users must be able to create accounts using username and password
 * Passwords should be securely hashed and stored.
 * Users must be able to reset their password via username.
 
-## Survey Creation:
+### Survey Creation:
 * Users should be able to create new surveys from their dashboard.
 * Surveys should have a customizable title, description, and cover image .
 * Users can define different types of questions:
 * Allow users to set optional or required questions.
 
-## User Registration and Login:
+### User Registration and Login:
 * Allow users to share surveys via a unique URL.
 * Provide email invitations with an embedded survey link.
 
-## Survey Response Management:
+### Survey Response Management:
 * Responses must be stored in the database, tagged by survey ID and user ID (if logged in)
 * Support for both anonymous and identified (logged-in) responses.
 * Ensure that users cannot submit the same survey more than once (unless specified by the survey creator).
 
-## Data Analysis and Reporting:
+### Data Analysis and Reporting:
 * Users should be able to view the results of each survey through their dashboard.
 * Pie charts, bar graphs, and line charts.
 * Allow users to export results as CSV, Excel, or PDF files.
 
-## Survey Expiration and Closing:
+### Survey Expiration and Closing:
 * Users must be able to set an expiration date for a survey or manually close it.
 * After expiration, the survey should not accept new responses.
+
+### Objective:
+* Develop a web-based platform for creating, managing, and distributing surveys. The platform will enable users to design surveys, view analytics, and share results, all through RESTful APIs and web services.
+
+### Technologies:
+* C# for backend services
+* RESTful API for interaction between frontend and backend
+* Blazer for web application
+* Database for storing survey data and responses (e.g., MySQL, PostgreSQL)
+
