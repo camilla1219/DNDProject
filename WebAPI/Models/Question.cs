@@ -1,13 +1,21 @@
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace TodoApi.Models;
-
-public class TodoContext : DbContext
+namespace DNDProject.Models
 {
-    public TodoContext(DbContextOptions<TodoContext> options)
-        : base(options)
+    public class Question
     {
-    }
+        public int Id { get; set; }
 
-    public DbSet<TodoItem> TodoItems { get; set; } = null!;
+        public int QuestionNo { get; set; }
+
+        public string QuestiomTitle { get; set; }
+
+        public string QuestionText { get; set; }
+
+        public int QuestionPriority { get; set; }
+    }
 }
