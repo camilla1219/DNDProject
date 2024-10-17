@@ -20,7 +20,7 @@ namespace TodoApi.Controllers
             _context = context;
         }
 
-        // GET: api/TodoItems
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
         {
@@ -30,13 +30,13 @@ namespace TodoApi.Controllers
 
             if (todoItems == null || !todoItems.Any())
             {
-                return NoContent(); // No items found, return 204 No Content
+                return NoContent(); 
             }
 
-            return Ok(todoItems); // Return 200 OK with the list
+            return Ok(todoItems); 
         }
 
-        // GET: api/TodoItems/5
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
         {
@@ -44,10 +44,10 @@ namespace TodoApi.Controllers
 
             if (todoItem == null)
             {
-                return NotFound(); // Return 404 if the item is not found
+                return NotFound(); 
             }
 
-            return Ok(ItemToDTO(todoItem)); // Return 200 OK with the found item
+            return Ok(ItemToDTO(todoItem)); 
         }
 
         // PUT: api/TodoItems/5
@@ -56,16 +56,16 @@ namespace TodoApi.Controllers
         {
             if (id != todoDTO.Id)
             {
-                return BadRequest("ID mismatch."); // Return 400 if the ID in the URL doesn't match the DTO
+                return BadRequest("ID mismatch."); 
             }
 
             var todoItem = await _context.TodoItems.FindAsync(id);
             if (todoItem == null)
             {
-                return NotFound(); // Return 404 if the item doesn't exist
+                return NotFound(); 
             }
 
-            // Update the item
+            
             todoItem.Name = todoDTO.Name;
             todoItem.IsComplete = todoDTO.IsComplete;
 
@@ -75,13 +75,13 @@ namespace TodoApi.Controllers
             }
             catch (DbUpdateConcurrencyException) when (!TodoItemExists(id))
             {
-                return NotFound(); // Return 404 if the item was not found during save due to a concurrency issue
+                return NotFound(); 
             }
 
-            return NoContent(); // Return 204 No Content on success
+            return NoContent(); 
         }
 
-        // POST: api/TodoItems
+       
         [HttpPost]
         public async Task<ActionResult<TodoItemDTO>> PostTodoItem(TodoItemDTO todoDTO)
         {
@@ -97,23 +97,23 @@ namespace TodoApi.Controllers
             return CreatedAtAction(
                 nameof(GetTodoItem),
                 new { id = todoItem.Id },
-                ItemToDTO(todoItem)); // Return 201 Created with the new item
+                ItemToDTO(todoItem)); 
         }
 
-        // DELETE: api/TodoItems/5
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(long id)
         {
             var todoItem = await _context.TodoItems.FindAsync(id);
             if (todoItem == null)
             {
-                return NotFound(); // Return 404 if the item doesn't exist
+                return NotFound(); 
             }
 
             _context.TodoItems.Remove(todoItem);
             await _context.SaveChangesAsync();
 
-            return NoContent(); // Return 204 No Content on success
+            return NoContent(); 
         }
 
         private bool TodoItemExists(long id)
