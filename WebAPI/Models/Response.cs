@@ -1,13 +1,9 @@
-using Microsoft.EntityFrameworkCore;
-
-namespace TodoApi.Models;
-
-public class TodoContext : DbContext
+namespace TodoApi.Models
 {
-    public TodoContext(DbContextOptions<TodoContext> options)
-        : base(options)
+    public class Response
     {
+        public long Id { get; set; }
+        public string Answer { get; set; } = string.Empty;
+        public long QuestionId { get; set; }
     }
-
-    public DbSet<TodoItem> TodoItems { get; set; } = null!;
 }
