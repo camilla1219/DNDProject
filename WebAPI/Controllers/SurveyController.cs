@@ -10,9 +10,9 @@ namespace DNDProject.Controllers
     [ApiController]
     public class SurveyController : ControllerBase
     {
-        private readonly SurveyContext _context;
+        private readonly DNDProjectContext _context;
 
-        public SurveyController(SurveyContext context)
+        public SurveyController(DNDProjectContext context)
         {
             _context = context;
         }
