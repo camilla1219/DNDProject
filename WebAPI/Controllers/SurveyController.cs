@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -6,9 +6,10 @@ using System.Web;
 using System.Web.Mvc;
 using SurveyTool.Models;
 
-namespace WebAPI.Controllers;
-[Route("api/[controller]")]
-[ApiController]
+namespace WebAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
     public class SurveyController : ControllerBase
     {
         private readonly SurveyContext _context;
@@ -19,35 +20,41 @@ namespace WebAPI.Controllers;
         }
 
         [HttpGet]
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
             var surveys = _context.Surveys.ToList();
             return View(surveys);
         }
 
         [HttpGet]
-        public ActionResult Create()
+        public async Task<ActionResult> Create()
         {
             var survey = new Survey
-                {
-                    StartDate = DateTime.Now,
-                    EndDate = DateTime.Now.AddYears(1)
-                };
+            {
+                StartDate = DateTime.Now,
+                EndDate = DateTime.Now.AddYears(1)
+            };
 
             return View(survey);
         }
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Create(Survey survey, string action)
+        public async Task<ActionResult> Create(Survey survey, string action)
         {
             if (ModelState.IsValid)
             {
-                survey.Questions.ForEach(q => q.CreatedOn = q.ModifiedOn = DateTime.Now);
+                survey.Questions.ForEach(q =>
+                {
+                    q.CreatedOn = DateTime.Now;
+                    q.ModifiedOn = DateTime.Now;
+                });
+
                 _context.Surveys.Add(survey);
                 _context.SaveChanges();
+
                 TempData["success"] = "The survey was successfully created!";
-                return RedirectToAction("Edit", new {id = survey.Id});
+                return RedirectToAction("Edit", new { id = survey.Id });
             }
             else
             {
@@ -57,16 +64,17 @@ namespace WebAPI.Controllers;
         }
 
         [HttpGet]
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
             var survey = _context.Surveys.Include("Questions").Single(x => x.Id == id);
             survey.Questions = survey.Questions.OrderBy(q => q.Priority).ToList();
+
             return View(survey);
         }
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Edit(Survey model)
+        public async Task<ActionResult> Edit(Survey model)
         {
             foreach (var question in model.Questions)
             {
@@ -88,14 +96,17 @@ namespace WebAPI.Controllers;
 
             _context.Entry(model).State = EntityState.Modified;
             _context.SaveChanges();
-            return RedirectToAction("Edit", new {id = model.Id});
+
+            return RedirectToAction("Edit", new { id = model.Id });
         }
 
         [HttpPost]
-        public ActionResult Delete(Survey survey)
+        public async Task<ActionResult> Delete(Survey survey)
         {
             _context.Entry(survey).State = EntityState.Deleted;
             _context.SaveChanges();
+
             return RedirectToAction("Index");
         }
     }
+}
