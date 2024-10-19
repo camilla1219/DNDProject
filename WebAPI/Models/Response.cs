@@ -18,6 +18,7 @@ namespace DNDProject.Models
         public DateTime ResponseDate { get; set; }  
         
         public Question Question { get; set; } 
+        
         public Survey Survey { get; set; }
         
     }
