@@ -6,22 +6,22 @@ using System.Web;
 using System.Web.Mvc;
 using SurveyTool.Models;
 
-namespace SurveyTool.Controllers
-{
-    [Authorize]
-    public class SurveysController : Controller
+namespace WebAPI.Controllers;
+[Route("api/[controller]")]
+[ApiController]
+    public class SurveyController : ControllerBase
     {
-        private readonly ApplicationDbContext _db;
+        private readonly SurveyContext _context;
 
-        public SurveysController(ApplicationDbContext db)
+        public SurveyController(SurveyContext context)
         {
-            _db = db;
+            _context = context;
         }
 
         [HttpGet]
         public ActionResult Index()
         {
-            var surveys = _db.Surveys.ToList();
+            var surveys = _context.Surveys.ToList();
             return View(surveys);
         }
 
@@ -44,8 +44,8 @@ namespace SurveyTool.Controllers
             if (ModelState.IsValid)
             {
                 survey.Questions.ForEach(q => q.CreatedOn = q.ModifiedOn = DateTime.Now);
-                _db.Surveys.Add(survey);
-                _db.SaveChanges();
+                _context.Surveys.Add(survey);
+                _context.SaveChanges();
                 TempData["success"] = "The survey was successfully created!";
                 return RedirectToAction("Edit", new {id = survey.Id});
             }
@@ -59,7 +59,7 @@ namespace SurveyTool.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
-            var survey = _db.Surveys.Include("Questions").Single(x => x.Id == id);
+            var survey = _context.Surveys.Include("Questions").Single(x => x.Id == id);
             survey.Questions = survey.Questions.OrderBy(q => q.Priority).ToList();
             return View(survey);
         }
@@ -76,27 +76,26 @@ namespace SurveyTool.Controllers
                 {
                     question.CreatedOn = DateTime.Now;
                     question.ModifiedOn = DateTime.Now;
-                    _db.Entry(question).State = EntityState.Added;
+                    _context.Entry(question).State = EntityState.Added;
                 }
                 else
                 {
                     question.ModifiedOn = DateTime.Now;
-                    _db.Entry(question).State = EntityState.Modified;
-                    _db.Entry(question).Property(x => x.CreatedOn).IsModified = false;
+                    _context.Entry(question).State = EntityState.Modified;
+                    _context.Entry(question).Property(x => x.CreatedOn).IsModified = false;
                 }
             }
 
-            _db.Entry(model).State = EntityState.Modified;
-            _db.SaveChanges();
+            _context.Entry(model).State = EntityState.Modified;
+            _context.SaveChanges();
             return RedirectToAction("Edit", new {id = model.Id});
         }
 
         [HttpPost]
         public ActionResult Delete(Survey survey)
         {
-            _db.Entry(survey).State = EntityState.Deleted;
-            _db.SaveChanges();
+            _context.Entry(survey).State = EntityState.Deleted;
+            _context.SaveChanges();
             return RedirectToAction("Index");
         }
     }
-}
