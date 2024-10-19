@@ -1,4 +1,4 @@
-namespace TodoApi.Models
+namespace ResponseDTO.Models
 {
     public class ResponseDTO
     {
