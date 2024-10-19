@@ -1,4 +1,4 @@
-namespace ResponseDTO.Models
+namespace DNDProject.Models
 
 {
     public class ResponseDTO
