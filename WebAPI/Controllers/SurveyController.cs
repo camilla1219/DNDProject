@@ -1,131 +1,102 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using TodoApi.Models;
+using System.Web;
+using System.Web.Mvc;
+using SurveyTool.Models;
 
-namespace TodoApi.Controllers;
-
-[Route("api/[controller]")]
-[ApiController]
-public class TodoItemsController : ControllerBase
+namespace SurveyTool.Controllers
 {
-    private readonly TodoContext _context;
-
-    public TodoItemsController(TodoContext context)
+    [Authorize]
+    public class SurveysController : Controller
     {
-        _context = context;
-    }
+        private readonly ApplicationDbContext _db;
 
-    // GET: api/TodoItems
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
-    {
-        return await _context.TodoItems
-            .Select(x => ItemToDTO(x))
-            .ToListAsync();
-    }
-
-    // GET: api/TodoItems/5
-    // <snippet_GetByID>
-    [HttpGet("{id}")]
-    public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
-    {
-        var todoItem = await _context.TodoItems.FindAsync(id);
-
-        if (todoItem == null)
+        public SurveysController(ApplicationDbContext db)
         {
-            return NotFound();
+            _db = db;
         }
 
-        return ItemToDTO(todoItem);
-    }
-    // </snippet_GetByID>
-
-    // PUT: api/TodoItems/5
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    // <snippet_Update>
-    [HttpPut("{id}")]
-    public async Task<IActionResult> PutTodoItem(long id, TodoItemDTO todoDTO)
-    {
-        if (id != todoDTO.Id)
+        [HttpGet]
+        public ActionResult Index()
         {
-            return BadRequest();
+            var surveys = _db.Surveys.ToList();
+            return View(surveys);
         }
 
-        var todoItem = await _context.TodoItems.FindAsync(id);
-        if (todoItem == null)
+        [HttpGet]
+        public ActionResult Create()
         {
-            return NotFound();
+            var survey = new Survey
+                {
+                    StartDate = DateTime.Now,
+                    EndDate = DateTime.Now.AddYears(1)
+                };
+
+            return View(survey);
         }
 
-        todoItem.Name = todoDTO.Name;
-        todoItem.IsComplete = todoDTO.IsComplete;
-
-        try
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Create(Survey survey, string action)
         {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException) when (!TodoItemExists(id))
-        {
-            return NotFound();
-        }
-
-        return NoContent();
-    }
-    // </snippet_Update>
-
-    // POST: api/TodoItems
-    // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-    // <snippet_Create>
-    [HttpPost]
-    public async Task<ActionResult<TodoItemDTO>> PostTodoItem(TodoItemDTO todoDTO)
-    {
-        var todoItem = new TodoItem
-        {
-            IsComplete = todoDTO.IsComplete,
-            Name = todoDTO.Name
-        };
-
-        _context.TodoItems.Add(todoItem);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction(
-            nameof(GetTodoItem),
-            new { id = todoItem.Id },
-            ItemToDTO(todoItem));
-    }
-    // </snippet_Create>
-
-    // DELETE: api/TodoItems/5
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteTodoItem(long id)
-    {
-        var todoItem = await _context.TodoItems.FindAsync(id);
-        if (todoItem == null)
-        {
-            return NotFound();
+            if (ModelState.IsValid)
+            {
+                survey.Questions.ForEach(q => q.CreatedOn = q.ModifiedOn = DateTime.Now);
+                _db.Surveys.Add(survey);
+                _db.SaveChanges();
+                TempData["success"] = "The survey was successfully created!";
+                return RedirectToAction("Edit", new {id = survey.Id});
+            }
+            else
+            {
+                TempData["error"] = "An error occurred while attempting to create this survey.";
+                return View(survey);
+            }
         }
 
-        _context.TodoItems.Remove(todoItem);
-        await _context.SaveChangesAsync();
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var survey = _db.Surveys.Include("Questions").Single(x => x.Id == id);
+            survey.Questions = survey.Questions.OrderBy(q => q.Priority).ToList();
+            return View(survey);
+        }
 
-        return NoContent();
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Edit(Survey model)
+        {
+            foreach (var question in model.Questions)
+            {
+                question.SurveyId = model.Id;
+
+                if (question.Id == 0)
+                {
+                    question.CreatedOn = DateTime.Now;
+                    question.ModifiedOn = DateTime.Now;
+                    _db.Entry(question).State = EntityState.Added;
+                }
+                else
+                {
+                    question.ModifiedOn = DateTime.Now;
+                    _db.Entry(question).State = EntityState.Modified;
+                    _db.Entry(question).Property(x => x.CreatedOn).IsModified = false;
+                }
+            }
+
+            _db.Entry(model).State = EntityState.Modified;
+            _db.SaveChanges();
+            return RedirectToAction("Edit", new {id = model.Id});
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Survey survey)
+        {
+            _db.Entry(survey).State = EntityState.Deleted;
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
-
-    private bool TodoItemExists(long id)
-    {
-        return _context.TodoItems.Any(e => e.Id == id);
-    }
-
-    private static TodoItemDTO ItemToDTO(TodoItem todoItem) =>
-       new TodoItemDTO
-       {
-           Id = todoItem.Id,
-           Name = todoItem.Name,
-           IsComplete = todoItem.IsComplete
-       };
 }
