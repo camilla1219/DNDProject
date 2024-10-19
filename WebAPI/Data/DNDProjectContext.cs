@@ -1,3 +1,4 @@
+using Azure;
 using Microsoft.EntityFrameworkCore;
 
 namespace DNDProject.Models
@@ -11,5 +12,7 @@ namespace DNDProject.Models
 
         // Define your DbSets (tables) here
         public DbSet<Question> Question { get; set; }
+        public DbSet<Survey> Surveys { get; set; }
+        public DbSet<Response> Responses { get; set; }
     }
 }
