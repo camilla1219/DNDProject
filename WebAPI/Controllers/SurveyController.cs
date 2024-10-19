@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using SurveyTool.Models;
 
-namespace WebAPI.Controllers
+namespace DNDProject.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
