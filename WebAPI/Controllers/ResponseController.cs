@@ -12,7 +12,7 @@ namespace DNDProject.Controllers
     {
         private readonly DNDProjectContext _context;
 
-        public ResponsesController(SurveyContext context)
+        public ResponsesController(DNDProjectContext context)
         {
             _context = context;
         }
