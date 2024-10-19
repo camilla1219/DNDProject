@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DNDProject.Models;
-using ResponseDTO.Models;
 
 namespace DNDProject.Controllers
 {
@@ -14,7 +13,7 @@ namespace DNDProject.Controllers
     {
         private readonly DNDProjectContext _context;
 
-        public ResponsesController(DNDProjectContext context)
+        public ResponsesController(DNDProjectContext(DNDProjectContext context)
         {
             _context = context;
         }
@@ -56,6 +55,7 @@ namespace DNDProject.Controllers
 
             response.Answer = responseDTO.Answer;
             response.QuestionId = responseDTO.QuestionId;
+            response.SurveyId = responseDTO.SurveyId;
 
             try
             {
@@ -75,7 +75,8 @@ namespace DNDProject.Controllers
             var response = new Response
             {
                 Answer = responseDTO.Answer,
-                QuestionId = responseDTO.QuestionId
+                QuestionId = responseDTO.QuestionId,
+                SurveyId = responseDTO.SurveyId
             };
 
             _context.Responses.Add(response);
@@ -112,7 +113,9 @@ namespace DNDProject.Controllers
             {
                 Id = response.Id,
                 Answer = response.Answer,
-                QuestionId = response.QuestionId
+                QuestionId = response.QuestionId,
+                SurveyId = response.SurveyId,
+                ResponseDate = response.ResponseDate
             };
     }
 }
