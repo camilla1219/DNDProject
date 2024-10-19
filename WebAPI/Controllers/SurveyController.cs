@@ -1,10 +1,8 @@
-using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using SurveyTool.Models;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace DNDProject.Controllers
 {
@@ -12,9 +10,9 @@ namespace DNDProject.Controllers
     [ApiController]
     public class SurveyController : ControllerBase
     {
-        private readonly SurveyContext _context;
+        private readonly DNDProjectContext _context;
 
-        public SurveyController(SurveyContext context)
+        public SurveyController(DNDProjectContext context)
         {
             _context = context;
         }
