@@ -12,7 +12,7 @@ namespace DNDProject.Models
 
         public int QuestionNo { get; set; }
 
-        public string QuestiomTitle { get; set; }
+        public string QuestionTitle { get; set; }
 
         public string QuestionText { get; set; }
 

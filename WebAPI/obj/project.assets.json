@@ -8164,19 +8164,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\camil\\.nuget\\packages\\": {}
+    "C:\\Users\\jacob\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\My Drive\\Uni Stuff\\7th Semester\\DND\\DNDProject\\WebAPI\\Survey.csproj",
+      "projectUniqueName": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
       "projectName": "Survey",
-      "projectPath": "H:\\My Drive\\Uni Stuff\\7th Semester\\DND\\DNDProject\\WebAPI\\Survey.csproj",
-      "packagesPath": "C:\\Users\\camil\\.nuget\\packages\\",
-      "outputPath": "H:\\My Drive\\Uni Stuff\\7th Semester\\DND\\DNDProject\\WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
+      "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\camil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
