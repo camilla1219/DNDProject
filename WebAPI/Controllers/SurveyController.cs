@@ -1,10 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DNDProject.Models;
-
 
 namespace DNDProject.Controllers
 {
@@ -19,67 +19,64 @@ namespace DNDProject.Controllers
             _context = context;
         }
 
+        // GET: api/survey
         [HttpGet]
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult<IEnumerable<Survey>>> GetSurveys()
         {
-            var surveys = _context.Surveys.ToList();
-            return View(surveys);
+            var surveys = await _context.Surveys.ToListAsync();
+            return Ok(surveys);
         }
 
-        [HttpGet]
-        public async Task<ActionResult> Create()
+        // GET: api/survey/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Survey>> GetSurvey(int id)
         {
-            var survey = new Survey
+            var survey = await _context.Surveys.Include(s => s.Questions)
+                                               .SingleOrDefaultAsync(x => x.Id == id);
+
+            if (survey == null)
             {
-                StartDate = DateTime.Now,
-                EndDate = DateTime.Now.AddYears(1)
-            };
-
-            return View(survey);
-        }
-
-        [HttpPost]
-        [ValidateInput(false)]
-        public async Task<ActionResult> Create(Survey survey, string action)
-        {
-            if (ModelState.IsValid)
-            {
-                survey.Questions.ForEach(q =>
-                {
-                    q.CreatedOn = DateTime.Now;
-                    q.ModifiedOn = DateTime.Now;
-                });
-
-                _context.Surveys.Add(survey);
-                _context.SaveChanges();
-
-                TempData["success"] = "The survey was successfully created!";
-                return RedirectToAction("Edit", new { id = survey.Id });
+                return NotFound();
             }
-            else
-            {
-                TempData["error"] = "An error occurred while attempting to create this survey.";
-                return View(survey);
-            }
+
+            return Ok(survey);
         }
 
-        [HttpGet]
-        public async Task<ActionResult> Edit(int id)
-        {
-            var survey = _context.Surveys.Include("Questions").Single(x => x.Id == id);
-            survey.Questions = survey.Questions.OrderBy(q => q.Priority).ToList();
-
-            return View(survey);
-        }
-
+        // POST: api/survey
         [HttpPost]
-        [ValidateInput(false)]
-        public async Task<ActionResult> Edit(Survey model)
+        public async Task<ActionResult<Survey>> CreateSurvey(Survey survey)
         {
-            foreach (var question in model.Questions)
+            if (!ModelState.IsValid)
             {
-                question.SurveyId = model.Id;
+                return BadRequest(ModelState);
+            }
 
+            survey.StartDate = DateTime.Now;
+            survey.EndDate = DateTime.Now.AddYears(1);
+            survey.Questions.ForEach(q =>
+            {
+                q.CreatedOn = DateTime.Now;
+                q.ModifiedOn = DateTime.Now;
+            });
+
+            _context.Surveys.Add(survey);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetSurvey), new { id = survey.Id }, survey);
+        }
+
+        // PUT: api/survey/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateSurvey(int id, Survey survey)
+        {
+            if (id != survey.Id)
+            {
+                return BadRequest();
+            }
+
+            foreach (var question in survey.Questions)
+            {
+                question.SurveyId = survey.Id;
                 if (question.Id == 0)
                 {
                     question.CreatedOn = DateTime.Now;
@@ -94,19 +91,46 @@ namespace DNDProject.Controllers
                 }
             }
 
-            _context.Entry(model).State = EntityState.Modified;
-            _context.SaveChanges();
+            _context.Entry(survey).State = EntityState.Modified;
 
-            return RedirectToAction("Edit", new { id = model.Id });
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!SurveyExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
 
-        [HttpPost]
-        public async Task<ActionResult> Delete(Survey survey)
+        // DELETE: api/survey/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteSurvey(int id)
         {
-            _context.Entry(survey).State = EntityState.Deleted;
-            _context.SaveChanges();
+            var survey = await _context.Surveys.FindAsync(id);
+            if (survey == null)
+            {
+                return NotFound();
+            }
 
-            return RedirectToAction("Index");
+            _context.Surveys.Remove(survey);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private bool SurveyExists(int id)
+        {
+            return _context.Surveys.Any(e => e.Id == id);
         }
     }
 }
