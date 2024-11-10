@@ -51,8 +51,8 @@ namespace DNDProject.Controllers
                 return BadRequest(ModelState);
             }
 
-            survey.StartDate = DateTime.Now;
-            survey.EndDate = DateTime.Now.AddYears(1);
+            survey.CreatedAt = DateTime.Now;
+            survey.ExpirationDate = DateTime.Now.AddYears(1);
             survey.Questions.ForEach(q =>
             {
                 q.CreatedOn = DateTime.Now;
@@ -76,7 +76,7 @@ namespace DNDProject.Controllers
 
             foreach (var question in survey.Questions)
             {
-                question.SurveyId = survey.Id;
+                question.Id = survey.Id;
                 if (question.Id == 0)
                 {
                     question.CreatedOn = DateTime.Now;

@@ -17,5 +17,9 @@ namespace DNDProject.Models
         public string QuestionText { get; set; }
 
         public int QuestionPriority { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+
+        public DateTime ModifiedOn { get; set; }
     }
 }
