@@ -1,136 +1,72 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DNDProject.Models;
+using WebAPI.models;
+using WebAPI.Services;
 
-namespace DNDProject.Controllers
+namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class SurveyController : ControllerBase
     {
-        private readonly DNDProjectContext _context;
+        private readonly FileService _fileservice;
+        private List<Survey> _surveys;
 
-        public SurveyController(DNDProjectContext context)
+        public SurveyController(FileService fileService)
         {
-            _context = context;
+            _fileservice = fileService;
+            _surveys = _fileservice.LoadSurveys();
         }
 
-        // GET: api/survey
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Survey>>> GetSurveys()
+        public ActionResult<List<Survey>> GetSurveys()
         {
-            var surveys = await _context.Surveys.ToListAsync();
-            return Ok(surveys);
+            return Ok(_surveys);
         }
 
-        // GET: api/survey/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Survey>> GetSurvey(int id)
+        [HttpGet("{Id}")]
+        public ActionResult<Survey> GetSurvey(int Id)
         {
-            var survey = await _context.Surveys.Include(s => s.Questions)
-                                               .SingleOrDefaultAsync(x => x.Id == id);
-
-            if (survey == null)
-            {
-                return NotFound();
-            }
-
+            var survey = _surveys.FirstOrDefault(s => s.Id == Id);
+            if (survey == null) return NotFound();
             return Ok(survey);
         }
 
-        // POST: api/survey
         [HttpPost]
-        public async Task<ActionResult<Survey>> CreateSurvey(Survey survey)
+        public ActionResult AddSurvey(Survey newSurvey)
         {
-            if (!ModelState.IsValid)
+                for (int i = 0; i < newSurvey.Questions.Count; i++)
             {
-                return BadRequest(ModelState);
+                newSurvey.Questions[i].Id = i + 1;
             }
-
-            survey.CreatedAt = DateTime.Now;
-            survey.ExpirationDate = DateTime.Now.AddYears(1);
-            survey.Questions.ForEach(q =>
-            {
-                q.CreatedOn = DateTime.Now;
-                q.ModifiedOn = DateTime.Now;
-            });
-
-            _context.Surveys.Add(survey);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetSurvey), new { id = survey.Id }, survey);
+            newSurvey.Id = _surveys.Any() ? _surveys.Max(s => s.Id) + 1 : 1;
+            _surveys.Add(newSurvey);
+            _fileservice.SaveSurveys(_surveys);
+            return CreatedAtAction(nameof(GetSurvey), new { id = newSurvey.Id }, newSurvey);
         }
 
-        // PUT: api/survey/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateSurvey(int id, Survey survey)
+        public ActionResult UpdateSurvey(int id, Survey updatedSurvey)
         {
-            if (id != survey.Id)
-            {
-                return BadRequest();
-            }
+            var survey = _surveys.FirstOrDefault(s => s.Id == id);
+            if (survey == null) return NotFound();
 
-            foreach (var question in survey.Questions)
-            {
-                question.Id = survey.Id;
-                if (question.Id == 0)
-                {
-                    question.CreatedOn = DateTime.Now;
-                    question.ModifiedOn = DateTime.Now;
-                    _context.Entry(question).State = EntityState.Added;
-                }
-                else
-                {
-                    question.ModifiedOn = DateTime.Now;
-                    _context.Entry(question).State = EntityState.Modified;
-                    _context.Entry(question).Property(x => x.CreatedOn).IsModified = false;
-                }
-            }
+            survey.Title = updatedSurvey.Title;
+            survey.Description = updatedSurvey.Description;
+            survey.Questions = updatedSurvey.Questions;
 
-            _context.Entry(survey).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SurveyExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
+            _fileservice.SaveSurveys(_surveys);
             return NoContent();
         }
 
-        // DELETE: api/survey/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSurvey(int id)
+        public ActionResult DeleteSurvey(int id)
         {
-            var survey = await _context.Surveys.FindAsync(id);
-            if (survey == null)
-            {
-                return NotFound();
-            }
+            var survey = _surveys.FirstOrDefault(s => s.Id == id);
+            if (survey == null) return NotFound();
 
-            _context.Surveys.Remove(survey);
-            await _context.SaveChangesAsync();
-
+            _surveys.Remove(survey);
+            _fileservice.SaveSurveys(_surveys);
             return NoContent();
-        }
-
-        private bool SurveyExists(int id)
-        {
-            return _context.Surveys.Any(e => e.Id == id);
         }
     }
 }

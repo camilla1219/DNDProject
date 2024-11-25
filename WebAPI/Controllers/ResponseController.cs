@@ -1,121 +1,52 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DNDProject.Models;
+using WebAPI.models;
+using WebAPI.Services;
 
-namespace DNDProject.Controllers
+
+[ApiController]
+[Route("api/[controller]")]
+public class SurveyResponseController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ResponsesController : ControllerBase
+    private readonly FileService _fileService;
+    private List<SurveyResponse> _responses;
+
+    public SurveyResponseController(FileService fileService)
     {
-        private readonly DNDProjectContext _context;
+        _fileService = fileService;
+        _responses = _fileService.LoadResponses() ?? new List<SurveyResponse>();
+    }
 
-        public ResponsesController(DNDProjectContext context)
-        {
-            _context = context;
-        }
+    [HttpGet]
+    public ActionResult<List<SurveyResponse>> GetResponses()
+    {
+        return Ok(_responses);
+    }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<ResponseDTO>>> GetResponses()
-        {
-            return await _context.Responses
-                .Select(x => ResponseToDTO(x))
-                .ToListAsync();
-        }
+    [HttpGet("{id}")]
+    public ActionResult<SurveyResponse> GetResponse(int id)
+    {
+        var response = _responses.FirstOrDefault(r => r.Id == id);
+        if (response == null) return NotFound();
+        return Ok(response);
+    }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ResponseDTO>> GetResponse(long id)
-        {
-            var response = await _context.Responses.FindAsync(id);
+    [HttpPost]
+    public ActionResult AddResponse(SurveyResponse newResponse)
+    {
+        newResponse.Id = _responses.Any() ? _responses.Max(r => r.Id) + 1 : 1;
+        newResponse.SubmittedAt = DateTime.UtcNow;
+        _responses.Add(newResponse);
+        _fileService.SaveResponses(_responses);
+        return CreatedAtAction(nameof(GetResponse), new { id = newResponse.Id }, newResponse);
+    }
 
-            if (response == null)
-            {
-                return NotFound();
-            }
-
-            return ResponseToDTO(response);
-        }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutResponse(long id, ResponseDTO responseDTO)
-        {
-            if (id != responseDTO.Id)
-            {
-                return BadRequest();
-            }
-
-            var response = await _context.Responses.FindAsync(id);
-            if (response == null)
-            {
-                return NotFound();
-            }
-
-            response.Answer = responseDTO.Answer;
-            response.QuestionId = responseDTO.QuestionId;
-            response.SurveyId = responseDTO.SurveyId;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException) when (!ResponseExists(id))
-            {
-                return NotFound();
-            }
-
-            return NoContent();
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<ResponseDTO>> PostResponse(ResponseDTO responseDTO)
-        {
-            var response = new Response
-            {
-                Answer = responseDTO.Answer,
-                QuestionId = responseDTO.QuestionId,
-                SurveyId = responseDTO.SurveyId
-            };
-
-            _context.Responses.Add(response);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(
-                nameof(GetResponse),
-                new { id = response.Id },
-                ResponseToDTO(response));
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteResponse(long id)
-        {
-            var response = await _context.Responses.FindAsync(id);
-            if (response == null)
-            {
-                return NotFound();
-            }
-
-            _context.Responses.Remove(response);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool ResponseExists(long id)
-        {
-            return _context.Responses.Any(e => e.Id == id);
-        }
-
-        private static ResponseDTO ResponseToDTO(Response response) =>
-            new ResponseDTO
-            {
-                Id = response.Id,
-                Answer = response.Answer,
-                QuestionId = response.QuestionId,
-                SurveyId = response.SurveyId,
-                ResponseDate = response.ResponseDate
-            };
+    [HttpDelete("{id}")]
+    public ActionResult DeleteResponse(int id)
+    {
+        var response = _responses.FirstOrDefault(r => r.Id == id);
+        if (response == null) return NotFound();
+        _responses.Remove(response);
+        _fileService.SaveResponses(_responses);
+        return NoContent();
     }
 }
