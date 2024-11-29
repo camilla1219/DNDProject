@@ -1,0 +1,34 @@
+@page "/viewSurvey"
+@rendermode InteractiveServer
+
+<PageTitle>View Survey</PageTitle>
+
+<div class="card">
+    <h3>View Survey</h3>
+    <div class="form-group field">
+        <label>Survey ID</label>
+        <input type="text" @bind="surveyId" @bind:event="oninput" placeholder="Enter Survey ID"/>
+    </div>
+    <div class="button-row">
+        <button @onclick="Search" class="searchbtn">Search</button>
+    </div>
+
+    @if (!string.IsNullOrEmpty(searchResult))
+    {
+        <div class="search-result">
+            <h4>Search Results</h4>
+            <p>@searchResult</p>
+        </div>
+    }
+</div>
+
+@code {
+    private string surveyId = "";
+    private string searchResult = "";
+
+    private void Search()
+    {
+        searchResult = $"Searching for answers to survey with ID: {surveyId}";
+        Console.WriteLine(searchResult);
+    }
+}

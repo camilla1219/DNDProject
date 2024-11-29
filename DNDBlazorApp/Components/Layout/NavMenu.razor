@@ -7,30 +7,30 @@
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
+    <nav class="nav flex-column">
+    <ul class="nav-list">
+        <li class="nav-item">
+            <a href="/" class="nav-link">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/counter" class="nav-link">
+                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/createSurvey" class="nav-link">
+                <span class="oi oi-plus" aria-hidden="true"></span> Create Survey
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/viewSurvey" class="nav-link">
+                <span class="oi oi-magnifying-glass" aria-hidden="true"></span> View Survey
+            </a>
+        </li>
+    </ul>
+</nav>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="createSurvey">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Create Survey
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
 </div>
 

@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jacob\\.nuget\\packages\\": {}
+    "C:\\Users\\liamm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\jacob\\Desktop\\DND1\\WebAPISurvey\\DNDBlazorApp\\DNDBlazorApp.csproj",
+      "projectUniqueName": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
       "projectName": "DNDBlazorApp",
-      "projectPath": "c:\\Users\\jacob\\Desktop\\DND1\\WebAPISurvey\\DNDBlazorApp\\DNDBlazorApp.csproj",
-      "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\jacob\\Desktop\\DND1\\WebAPISurvey\\DNDBlazorApp\\obj\\",
+      "projectPath": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
+      "packagesPath": "C:\\Users\\liamm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\liamm\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
