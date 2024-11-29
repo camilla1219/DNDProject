@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj": {}
+    "c:\\Users\\jacob\\Desktop\\DND1\\WebAPISurvey\\DNDBlazorApp\\DNDBlazorApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj": {
+    "c:\\Users\\jacob\\Desktop\\DND1\\WebAPISurvey\\DNDBlazorApp\\DNDBlazorApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
+        "projectUniqueName": "c:\\Users\\jacob\\Desktop\\DND1\\WebAPISurvey\\DNDBlazorApp\\DNDBlazorApp.csproj",
         "projectName": "DNDBlazorApp",
-        "projectPath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
-        "packagesPath": "C:\\Users\\camil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\",
+        "projectPath": "c:\\Users\\jacob\\Desktop\\DND1\\WebAPISurvey\\DNDBlazorApp\\DNDBlazorApp.csproj",
+        "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\jacob\\Desktop\\DND1\\WebAPISurvey\\DNDBlazorApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\camil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -36,9 +36,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -54,24 +53,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -80,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
