@@ -17,10 +17,36 @@
 		
     </div>
     <div class="button-row">
+         <button @onclick="AddQuestion" class="acceptbtn">Create Question</button>
         <button @onclick="Create" class="acceptbtn">Create</button>
     </div>
 </div>
+<div class="questions">
+    @foreach (var question in questions)
+    {
+        <div class="card">
+            <h4>@question.Text</h4>
 
+            <div class="form-group field">
+                <label>Question</label>
+                <input type="text" @bind="question.Text" @bind:event="oninput" />
+
+                <label>Response Options</label>
+                <div class="options">
+                    @foreach (var option in question.Options)
+                    {
+                        <div class="option">
+                            <input type="text" @bind="option" @bind:event="oninput" />
+                            <button @onclick="(() => RemoveOption(question, option))" class="remove-btn">Remove</button>
+                        </div>
+                    }
+                </div>
+
+                <button @onclick="(() => AddOption(question))" class="add-option-btn">Add Option</button>
+            </div>
+        </div>
+    }
+</div>
 
 
 @code {
