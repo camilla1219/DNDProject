@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "FULT6ZuA6Dw=",
+  "dgSpecHash": "1J1eFp3hnBw=",
   "success": true,
-  "projectFilePath": "c:\\Users\\jacob\\Desktop\\DND1\\WebAPISurvey\\DNDBlazorApp\\DNDBlazorApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\camil\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\camil\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\camil\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\camil\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.11\\microsoft.netcore.app.host.win-x64.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }
