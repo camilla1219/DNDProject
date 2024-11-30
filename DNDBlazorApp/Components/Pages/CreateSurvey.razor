@@ -51,13 +51,34 @@
 </div>
 
 
+
 @code {
     private string title = "";
-
-    
     private string description = "";
+    private List<Question> questions = new List<Question>();
 
-    private async Task Create(){
-        Console.WriteLine("Hello !");
+    private async Task Create()
+    {
+        Console.WriteLine("Survey Created!");
+    }
+
+    private void AddQuestion()
+    {
+        questions.Add(new Question());
+    }
+
+    private void RemoveQuestion(Question question)
+    {
+        questions.Remove(question);
+    }
+
+    private void AddOption(Question question)
+    {
+        question.Options.Add("");
+    }
+
+    private void RemoveOption(Question question, string option)
+    {
+        question.Options.Remove(option);
     }
 }
