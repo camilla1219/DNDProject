@@ -58,11 +58,11 @@ c:\Users\jacob\Desktop\DND1\WebAPISurvey\DNDBlazorApp\obj\Debug\net8.0\DNDBlazor
 c:\Users\jacob\Desktop\DND1\WebAPISurvey\DNDBlazorApp\obj\Debug\net8.0\ref\DNDBlazorApp.dll
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\bin\Debug\net8.0\DNDBlazorApp.exe
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\bin\Debug\net8.0\DNDBlazorApp.dll
+C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.csproj.AssemblyReference.cache
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.AssemblyInfoInputs.cache
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.AssemblyInfo.cs
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.csproj.CoreCompileInputs.cache
+C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.sourcelink.json
-C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.csproj.AssemblyReference.cache
-C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.MvcApplicationPartsAssemblyInfo.cs
