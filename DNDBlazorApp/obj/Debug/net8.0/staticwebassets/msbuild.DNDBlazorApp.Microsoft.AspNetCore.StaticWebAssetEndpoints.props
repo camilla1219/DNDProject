@@ -40,13 +40,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\DNDBlazorApp.55apa51y4g.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"55apa51y4g"},{"Name":"integrity","Value":"sha256-Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14="},{"Name":"label","Value":"_content/DNDBlazorApp/DNDBlazorApp.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5907"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 01:18:33 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5907"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 01:29:14 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/DNDBlazorApp/DNDBlazorApp.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\DNDBlazorApp.55apa51y4g.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5907"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 01:18:33 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5907"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=\u0022"},{"Name":"Last-Modified","Value":"Sat, 30 Nov 2024 01:29:14 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/DNDBlazorApp/favicon.ifv42okdf2.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</AssetFile>
