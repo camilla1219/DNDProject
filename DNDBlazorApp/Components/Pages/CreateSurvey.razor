@@ -35,13 +35,14 @@
 
                 <label>Response Options</label>
                 <div class="options">
-                    @foreach (var option in question.Options)
-                    {
-                        <div class="option">
-                            <input type="text" @bind="option" @bind:event="oninput" />
-                            <button @onclick="(() => RemoveOption(question, option))" class="remove-btn">Remove</button>
-                        </div>
-                    }
+                   @for (int i = 0; i < question.Options.Count; i++)
+{
+    <div>
+        <input type="text" @bind="question.Options[i]" />
+        <button @onclick="() => RemoveOption(question, question.Options[i])">Remove Option</button>
+    </div>
+}
+
                 </div>
 
                 <button @onclick="(() => AddOption(question))" class="add-option-btn">Add Option</button>
@@ -62,10 +63,11 @@
         Console.WriteLine("Survey Created!");
     }
 
-    private void AddQuestion()
-    {
-        questions.Add(new Question());
-    }
+  private void AddQuestion()
+{
+    questions.Add(new Question { Text = "New Question", Options = new List<string>() });
+}
+
 
     private void RemoveQuestion(Question question)
     {
