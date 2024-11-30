@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\My Drive\\Uni Stuff\\DND-7thSemester\\DNDProject\\WebAPI\\Survey.csproj": {}
+    "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj": {}
   },
   "projects": {
-    "G:\\My Drive\\Uni Stuff\\DND-7thSemester\\DNDProject\\WebAPI\\Survey.csproj": {
+    "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\My Drive\\Uni Stuff\\DND-7thSemester\\DNDProject\\WebAPI\\Survey.csproj",
+        "projectUniqueName": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
         "projectName": "Survey",
-        "projectPath": "G:\\My Drive\\Uni Stuff\\DND-7thSemester\\DNDProject\\WebAPI\\Survey.csproj",
+        "projectPath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
         "packagesPath": "C:\\Users\\camil\\.nuget\\packages\\",
-        "outputPath": "G:\\My Drive\\Uni Stuff\\DND-7thSemester\\DNDProject\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\camil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -84,24 +84,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

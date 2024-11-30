@@ -64,3 +64,5 @@ C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlaz
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.csproj.CoreCompileInputs.cache
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.sourcelink.json
+C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.csproj.AssemblyReference.cache
+C:\Users\camil\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.MvcApplicationPartsAssemblyInfo.cs
