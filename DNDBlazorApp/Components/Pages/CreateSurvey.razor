@@ -5,10 +5,11 @@
 
 <PageTitle>Create Survey</PageTitle>
 
-
-
 <div class="card">
     <h3>Create Survey</h3>
+</div>
+
+<div class="card">
     <div class="form-group field">
         <label>Title</label>
         <input type="text" @bind="title" @bind:event="oninput"/> 
@@ -33,7 +34,7 @@
                 <label>Question</label>
                 <input type="text" @bind="question.Text" @bind:event="oninput" />
 
-                <label>Response Options</label>
+            
                 <div class="options">
                    @for (int i = 0; i < question.Options.Count; i++)
 {
@@ -65,7 +66,7 @@
 
   private void AddQuestion()
 {
-    questions.Add(new Question { Text = "New Question", Options = new List<string>() });
+    questions.Add(new Question { Text = "Enter Question", Options = new List<string>() });
 }
 
 
