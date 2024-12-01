@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Survey", "WebAPI\Survey.csproj", "{CA994ED0-E1A7-4526-98B3-81458EBBA0FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNDBlazorApp", "DNDBlazorApp\DNDBlazorApp.csproj", "{3E3F2A62-F0AF-4DBB-9B3D-D448FDD3BB0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CA994ED0-E1A7-4526-98B3-81458EBBA0FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA994ED0-E1A7-4526-98B3-81458EBBA0FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA994ED0-E1A7-4526-98B3-81458EBBA0FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3F2A62-F0AF-4DBB-9B3D-D448FDD3BB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3F2A62-F0AF-4DBB-9B3D-D448FDD3BB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3F2A62-F0AF-4DBB-9B3D-D448FDD3BB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3F2A62-F0AF-4DBB-9B3D-D448FDD3BB0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "99OOkgVIyhUMT7BvlLeol+5vBclVVkAeTHRilZsVdFA=",
+  "Hash": "/S6qH3HFyOTxj+ozwmOi04EEkj1Jzhrit/kJsCbcxmw=",
   "Source": "DNDBlazorApp",
   "BasePath": "_content/DNDBlazorApp",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
+      "Version": 2,
+      "Source": "Survey",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "DNDBlazorApp\\wwwroot",
