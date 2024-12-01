@@ -1,0 +1,76 @@
+# Build Folders
+bin/
+obj/
+out/
+
+# User-Specific Files
+*.user
+*.userosscache
+*.suo
+*.vspx
+*.vspscc
+*.vssscc
+
+# Logs
+*.log
+
+# IDE Specific
+.vscode/
+.idea/
+*.sln.ide/
+*.VC.db
+
+# Visual Studio Specific
+.vs/
+*.ncrunchsolution
+*.ncrunchproject
+NCrunchTemp/
+
+# Rider Specific
+.idea/
+
+# ASP.NET
+**/wwwroot/*
+!**/wwwroot/**/*.config
+!**/wwwroot/**/*.json
+!**/wwwroot/**/*.js
+!**/wwwroot/**/*.css
+!**/wwwroot/**/*.html
+
+# Configuration Files
+appsettings.json
+appsettings.*.json
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/packages/
+.nuget/NuGet.Config
+
+# Package Management
+packages/
+*.csproj.user
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Temporary Files
+*.pidb
+*.tmp
+*.temp
+*.svclog
+*.pdb
+*.mdb
+
+# Deployment
+publish/
+*.publishsettings
+
+# Recycle Bin
+*.bak
+*.orig
+*.swp
+
+# Generated Files
+*.generated.cs
+ServiceFabricBackup/
