@@ -1,6 +1,10 @@
 @page "/createSurvey"
 @rendermode InteractiveServer
+
 @using WebAPI.models
+@using WebAPI.Services
+
+@inject FileService SurveyService
 
 <head>
     <link href="survey.css" rel="stylesheet" />
@@ -18,48 +22,71 @@
         <div class="card">
             <div class="form-group field">
                 <label>Title</label>
-                <input type="text" @bind="title" @bind:event="oninput"/> 
+                <input type="text" placeholder="Enter Survey Title" @bind="title" @bind:event="oninput" /> 
                 
                 <label>Description</label>
-                <input type="text" @bind="description" @bind:event="oninput"/> 
-            </div>
-            <div class="button-row">
-                <button @onclick="AddQuestion" class="acceptbtn">Create Question</button>
+                <input type="text" placeholder="Enter Survey Description" @bind="description" @bind:event="oninput" /> 
             </div>
         </div>
 
-        <div class="questions">
-            @foreach (var question in questions)
+         <div class="questions">
+            
+        @foreach (var question in questions)
+        {
+            <div class="card">
+                <!-- X Button for Removing Question -->
+            <button class="remove-question-btn" @onclick="() => RemoveQuestion(question)">X</button>
+                <h4>@question.Text</h4>
+                <input type="text" placeholder="Enter Question" @bind="question.Text" @bind:event="oninput" />
+
+                @if (question.Type == "MultipleChoice" || question.Type == "Checkboxes")
+                {
+                    <div class="options">
+    @for (int i = 0; i < question.Options.Count; i++)
+    {
+        <div>
+            @if (question.Type == "MultipleChoice")
             {
-                <div class="card">
-                    <h4>@question.Text</h4>
-
-                    <div class="form-group field">
-                        <label>Question</label>
-                        <input type="text" @bind="question.Text" @bind:event="oninput" />
-                    
-                        <div class="options">
-                            @for (int i = 0; i < question.Options.Count; i++)
-                            {
-                                <div>
-                                    <input type="text" @bind="question.Options[i]" />
-                                    <button @onclick="() => RemoveOption(question, question.Options[i])">X</button>
-                                </div>
-                            }
-                        </div>
-
-                        <button @onclick="(() => AddOption(question))" class="add-option-btn">Add Option</button>
-                    </div>
-                </div>
+                <input type="radio" disabled />
             }
+            else if (question.Type == "Checkboxes")
+            {
+                <input type="checkbox" disabled />
+            }
+            <input type="text" placeholder="Enter Option" value="@question.Options[i]" 
+                   @oninput="(e) => UpdateOption(question, i, e.Value.ToString())" />
+            <button @onclick="() => RemoveOptionByIndex(question, i)">X</button>
         </div>
+    }
+</div>
+<button @onclick="(() => AddOption(question))" class="add-option-btn">Add Option</button>
+
+
+                }
+                else if (question.Type == "ShortAnswer")
+                {
+                    <input type="text" placeholder="Short Answer (Respondent will type here)" disabled />
+                }
+            </div>
+        }
     </div>
+</div>
 
     <!-- Right Section (Purple Box) -->
     <div class="right-content">
+        
         <div class="button-box">
-            <button @onclick="AddQuestion" class="acceptbtn">Add Another Question</button>
-            
+             <!-- Dropdown and Add Button -->
+        <div class="dropdown-container">
+            <select @bind="selectedQuestionType">
+                <option value="MultipleChoice">Multiple Choice</option>
+                <option value="Checkboxes">Checkboxes</option>
+                <option value="ShortAnswer">Short Answer</option>
+            </select>
+            <button @onclick="AddQuestion" class="acceptbtn">Add Question</button>
+        </div>
+        
+        
             <button @onclick="Create" class="acceptbtn">Create</button>
         </div>
     </div>
@@ -69,16 +96,75 @@
     private string title = "";
     private string description = "";
     private List<Question> questions = new List<Question>();
-
-    private async Task Create()
+        //temp task
+     /*     private async Task Create()
     {
         Console.WriteLine("Survey Created!");
-    }
+    }*/
 
-    private void AddQuestion()
+private async Task Create()
+{
+    /*var newSurvey = new Survey
     {
-        questions.Add(new Question { Text = "Enter Question", Options = new List<string>() });
+        Title = title,
+        Description = description,
+        Questions = questions
+    };*/
+
+    try
+    {
+        var surveys = SurveyService.LoadSurveys();
+        // Calculate the next ID
+        int nextId = surveys.Any() ? surveys.Max(s => s.Id) + 1 : 1;
+
+        // Create the new survey with an incremental ID
+        var newSurvey = new Survey
+        {
+            Id = nextId, // Assign the calculated ID
+            Title = title,
+            Description = description,
+            Questions = questions
+        };
+
+        surveys.Add(newSurvey);
+        SurveyService.SaveSurveys(surveys);
+        Console.WriteLine($"Survey Created: {newSurvey.Title}");
+        ResetForm();
     }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error saving survey: {ex.Message}");
+    }
+}
+    private void ResetForm()
+    {
+        title = "";
+        description = "";
+        questions.Clear();
+    }
+ /* private void AddQuestion()
+{
+    questions.Add(new Question { Text = "", Options = new List<string>() });
+}*/
+private string selectedQuestionType = "MultipleChoice"; // Default option
+
+private void AddQuestion()
+{
+    questions.Add(new Question
+    {
+        Text = "",
+        Type = selectedQuestionType,
+        Options = selectedQuestionType == "ShortAnswer" ? null : new List<string>()
+    });
+}
+
+private void UpdateOption(Question question, int index, string value)
+{
+    if (index >= 0 && index < question.Options.Count)
+    {
+        question.Options[index] = value;
+    }
+}
 
     private void RemoveQuestion(Question question)
     {
@@ -90,8 +176,15 @@
         question.Options.Add("");
     }
 
-    private void RemoveOption(Question question, string option)
+private void RemoveOptionByIndex(Question question, int index)
+{
+    if (index >= 0 && index < question.Options.Count)
     {
-        question.Options.Remove(option);
+        question.Options.RemoveAt(index);
+        StateHasChanged(); // Ensure UI updates
     }
 }
+
+
+}
+
