@@ -28,12 +28,12 @@
         </div>
 
          <div class="questions">
-             <!-- X Button for Removing Question -->
-            <button class="remove-question-btn" @onclick="() => RemoveQuestion(question)">X</button>
             
         @foreach (var question in questions)
         {
             <div class="card">
+                <!-- X Button for Removing Question -->
+            <button class="remove-question-btn" @onclick="() => RemoveQuestion(question)">X</button>
                 <h4>@question.Text</h4>
                 <input type="text" placeholder="Enter Question" @bind="question.Text" @bind:event="oninput" />
 
