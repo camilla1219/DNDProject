@@ -74,3 +74,6 @@ publish/
 # Generated Files
 *.generated.cs
 ServiceFabricBackup/
+DNDBlazorApp/bin/Debug/net8.0/Survey.dll
+DNDBlazorApp/bin/Debug/net8.0/DNDBlazorApp.dll
+DNDBlazorApp/bin/Debug/net8.0/DNDBlazorApp.exe
