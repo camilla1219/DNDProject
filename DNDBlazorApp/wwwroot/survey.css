@@ -1,6 +1,31 @@
 /* wwwroot/survey.css */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-.card h3, .card h4 {
-    margin-top: 0;
-    color: #333;
+.form-group {
+    margin-bottom: 15px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.acceptbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.acceptbtn:hover {
+    background-color: #45a049;
 }
