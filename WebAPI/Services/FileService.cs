@@ -5,11 +5,21 @@ namespace WebAPI.Services
 {
     public class FileService
     {
+        private readonly string _dataDirectory = "Data";
         private readonly string _surveyFilePath = "Data/surveys.json";
         private readonly string _responseFilePath = "Data/responses.json";
 
         public FileService()
         {
+            _surveyFilePath = Path.Combine(_dataDirectory, "surveys.json");
+            _responseFilePath = Path.Combine(_dataDirectory, "responses.json");
+
+            // Ensure the Data directory exists
+            if (!Directory.Exists(_dataDirectory))
+            {
+                Directory.CreateDirectory(_dataDirectory);
+            }
+
             if (!File.Exists(_surveyFilePath))
             {
                 File.WriteAllText(_surveyFilePath, "[]"); // Create an empty JSON array
