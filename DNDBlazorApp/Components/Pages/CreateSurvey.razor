@@ -96,10 +96,11 @@
         description = "";
         questions.Clear();
     }*/
-    private void AddQuestion()
-    {
-        questions.Add(new Question {  Options = new List<string>() });
-    }
+  private void AddQuestion()
+{
+    questions.Add(new Question { Text = "", Options = new List<string>() });
+}
+
 
     private void RemoveQuestion(Question question)
     {
