@@ -102,23 +102,28 @@
         Console.WriteLine("Survey Created!");
     }*/
 
-    private async Task Create()
+private async Task Create()
+{
+    var newSurvey = new Survey
     {
-        var newSurvey = new Survey
-        {
-            Title = title,
-            Description = description,
-            Questions = questions
-        };
+        Title = title,
+        Description = description,
+        Questions = questions
+    };
 
+    try
+    {
         var surveys = SurveyService.LoadSurveys();
         surveys.Add(newSurvey);
         SurveyService.SaveSurveys(surveys);
-
         Console.WriteLine($"Survey Created: {newSurvey.Title}");
         ResetForm();
     }
-
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error saving survey: {ex.Message}");
+    }
+}
     private void ResetForm()
     {
         title = "";
