@@ -1,35 +1,97 @@
 @page "/createSurvey"
 @rendermode InteractiveServer
+@using WebAPI.models
+
+<head>
+    <link href="survey.css" rel="stylesheet" />
+</head>
 
 <PageTitle>Create Survey</PageTitle>
 
+<div class="container">
+    <!-- Left Section -->
+    <div class="left-content">
+        <div class="header">
+            <h3>Create Survey</h3>
+        </div>
 
+        <div class="card">
+            <div class="form-group field">
+                <label>Title</label>
+                <input type="text" @bind="title" @bind:event="oninput"/> 
+                
+                <label>Description</label>
+                <input type="text" @bind="description" @bind:event="oninput"/> 
+            </div>
+            <div class="button-row">
+                <button @onclick="AddQuestion" class="acceptbtn">Create Question</button>
+            </div>
+        </div>
 
-<div class="card">
-    <h3>Create Survey</h3>
-    <div class="form-group field">
-        <label>Title</label>
-        <input type="text" @bind="title" @bind:event="oninput"/> 
-		
-		<label>Description</label>
-        <input type="text" @bind="description" @bind:event="oninput"/> 
-		
-		
+        <div class="questions">
+            @foreach (var question in questions)
+            {
+                <div class="card">
+                    <h4>@question.Text</h4>
+
+                    <div class="form-group field">
+                        <label>Question</label>
+                        <input type="text" @bind="question.Text" @bind:event="oninput" />
+                    
+                        <div class="options">
+                            @for (int i = 0; i < question.Options.Count; i++)
+                            {
+                                <div>
+                                    <input type="text" @bind="question.Options[i]" />
+                                    <button @onclick="() => RemoveOption(question, question.Options[i])">X</button>
+                                </div>
+                            }
+                        </div>
+
+                        <button @onclick="(() => AddOption(question))" class="add-option-btn">Add Option</button>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
-    <div class="button-row">
-        <button @onclick="Create" class="acceptbtn">Create</button>
+
+    <!-- Right Section (Purple Box) -->
+    <div class="right-content">
+        <div class="button-box">
+            <button @onclick="AddQuestion" class="acceptbtn">Add Another Question</button>
+            
+            <button @onclick="Create" class="acceptbtn">Create</button>
+        </div>
     </div>
 </div>
 
-
-
 @code {
     private string title = "";
-
-    
     private string description = "";
+    private List<Question> questions = new List<Question>();
 
-    private async Task Create(){
-        Console.WriteLine("Hello !");
+    private async Task Create()
+    {
+        Console.WriteLine("Survey Created!");
+    }
+
+    private void AddQuestion()
+    {
+        questions.Add(new Question { Text = "Enter Question", Options = new List<string>() });
+    }
+
+    private void RemoveQuestion(Question question)
+    {
+        questions.Remove(question);
+    }
+
+    private void AddOption(Question question)
+    {
+        question.Options.Add("");
+    }
+
+    private void RemoveOption(Question question, string option)
+    {
+        question.Options.Remove(option);
     }
 }
