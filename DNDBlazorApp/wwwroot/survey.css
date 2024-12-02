@@ -1,31 +1,85 @@
 /* wwwroot/survey.css */
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 
-.form-group {
-    margin-bottom: 15px;
-}
 
-.button-row {
+/* Overall container with flex layout */
+.container {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
+    padding: 20px;
+}
+
+/* Left content (survey form) */
+.left-content {
+    flex: 1;  /* Take up remaining space */
+    padding-right: 20px;
+}
+
+/* Right content (purple box) */
+.right-content {
+    width: 300px;  /* Fixed width for the purple box */
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Purple box styling */
+.purple-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Header for the survey form */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h3 {
+    margin: 0;
+}
+
+/* Form field styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.field {
+    margin-top: 10px;
+}
+
+.card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
 }
 
 .acceptbtn {
-    background-color: #4CAF50;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
-    padding: 10px 15px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .acceptbtn:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
+}
+
+/* Button row styling */
+.button-row {
+    margin-top: 10px;
+}
+
+/* Option buttons */
+.add-option-btn {
+    margin-top: 10px;
 }
