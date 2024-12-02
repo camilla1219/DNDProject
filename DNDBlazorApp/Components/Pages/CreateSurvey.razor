@@ -40,25 +40,26 @@
                 @if (question.Type == "MultipleChoice" || question.Type == "Checkboxes")
                 {
                     <div class="options">
-                        @for (int i = 0; i < question.Options.Count; i++)
-                        {
-                            <div>
-                                @if (question.Type == "MultipleChoice")
-                                {
-                                    <input type="radio" disabled />
-                                }
-                                else if (question.Type == "Checkboxes")
-                                {
-                                    <input type="checkbox" disabled />
-                                }
-                                <input type="text" placeholder="Enter Option" value="@question.Options[i]" 
-                                     @oninput="(e) => UpdateOption(question, i, e.Value.ToString())" />
+    @for (int i = 0; i < question.Options.Count; i++)
+    {
+        <div>
+            @if (question.Type == "MultipleChoice")
+            {
+                <input type="radio" disabled />
+            }
+            else if (question.Type == "Checkboxes")
+            {
+                <input type="checkbox" disabled />
+            }
+            <input type="text" placeholder="Enter Option" value="@question.Options[i]" 
+                   @oninput="(e) => UpdateOption(question, i, e.Value.ToString())" />
+            <button @onclick="() => RemoveOptionByIndex(question, i)">X</button>
+        </div>
+    }
+</div>
+<button @onclick="(() => AddOption(question))" class="add-option-btn">Add Option</button>
 
-                                <button @onclick="() => RemoveOption(question, question.Options[i])">X</button>
-                            </div>
-                        }
-                    </div>
-                    <button @onclick="(() => AddOption(question))" class="add-option-btn">Add Option</button>
+
                 }
                 else if (question.Type == "ShortAnswer")
                 {
@@ -156,13 +157,14 @@ private void UpdateOption(Question question, int index, string value)
         question.Options.Add("");
     }
 
-   private void RemoveOption(Question question, string option)
+private void RemoveOptionByIndex(Question question, int index)
 {
-    if (question.Options.Contains(option))
+    if (index >= 0 && index < question.Options.Count)
     {
-        question.Options.Remove(option);
-        StateHasChanged(); // Notify Blazor of the UI update
+        question.Options.RemoveAt(index);
+        StateHasChanged(); // Ensure UI updates
     }
 }
+
 
 }
