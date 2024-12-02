@@ -7,8 +7,10 @@
       {
         "Id": 1,
         "Text": "string",
-        "Options": ["string"]
+        "Type": "ShortAnswer", 
+        "Options": []
       }
     ]
   }
 ]
+
