@@ -1,58 +1,13 @@
 [
   {
     "Id": 1,
-    "Title": "Customer Satisfaction Survey",
-    "Description": "A survey to understand customer satisfaction levels.",
+    "Title": "string",
+    "Description": "string",
     "Questions": [
       {
         "Id": 1,
-        "Text": "How satisfied are you with our service?",
-        "Options": [
-          "Very Satisfied",
-          "Satisfied",
-          "Neutral",
-          "Dissatisfied",
-          "Very Dissatisfied"
-        ]
-      },
-      {
-        "Id": 2,
-        "Text": "Would you recommend us to others?",
-        "Options": ["Yes", "No"]
-      }
-    ]
-  },
-  {
-    "Id": 2,
-    "Title": "Employee Feedback Survey",
-    "Description": "Gathering feedback from employees on workplace satisfaction.",
-    "Questions": [
-      {
-        "Id": 1,
-        "Text": "How do you rate your work-life balance?",
-        "Options": ["Excellent", "Good", "Average", "Poor"]
-      },
-      {
-        "Id": 2,
-        "Text": "Do you feel valued at work?",
-        "Options": ["Yes", "No", "Sometimes"]
-      }
-    ]
-  },
-  {
-    "Id": 3,
-    "Title": "Product Feedback Survey",
-    "Description": "Understanding customer feedback about our latest product.",
-    "Questions": [
-      {
-        "Id": 1,
-        "Text": "How do you rate the quality of the product?",
-        "Options": ["Excellent", "Good", "Fair", "Poor"]
-      },
-      {
-        "Id": 2,
-        "Text": "How likely are you to purchase this product again?",
-        "Options": ["Very Likely", "Likely", "Unlikely", "Very Unlikely"]
+        "Text": "string",
+        "Options": ["string"]
       }
     ]
   }

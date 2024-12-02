@@ -1,5 +1,5 @@
 using DNDBlazorApp.Components;
-using WebAPI.Services; //ref to file service
+using WebAPI.Services; // Add this to reference FileService
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,14 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// Add HttpClient for API communication
-builder.Services.AddHttpClient("WebAPI", client =>
-{
-    client.BaseAddress = new Uri("https://localhost:5001/"); // Update this URL to match your WebAPI's address
-});
-
-// Register HttpClient as scoped to use in Razor components
-builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("WebAPI"));
+// Register FileService in the DI container
+builder.Services.AddSingleton<FileService>();
 
 var app = builder.Build();
 
