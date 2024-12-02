@@ -104,16 +104,28 @@
 
 private async Task Create()
 {
-    var newSurvey = new Survey
+    /*var newSurvey = new Survey
     {
         Title = title,
         Description = description,
         Questions = questions
-    };
+    };*/
 
     try
     {
         var surveys = SurveyService.LoadSurveys();
+        // Calculate the next ID
+        int nextId = surveys.Any() ? surveys.Max(s => s.Id) + 1 : 1;
+
+        // Create the new survey with an incremental ID
+        var newSurvey = new Survey
+        {
+            Id = nextId, // Assign the calculated ID
+            Title = title,
+            Description = description,
+            Questions = questions
+        };
+
         surveys.Add(newSurvey);
         SurveyService.SaveSurveys(surveys);
         Console.WriteLine($"Survey Created: {newSurvey.Title}");
