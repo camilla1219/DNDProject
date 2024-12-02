@@ -17,7 +17,7 @@
 /* Right content (purple box) */
 .right-content {
     width: 300px;  /* Fixed width for the purple box */
-    background: rgba(53, 0, 139, 0.534);
+    background: rgba(94, 10, 102, 0.925);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -68,7 +68,7 @@
 
 .acceptbtn {
     padding: 10px 20px;
-    background-color: #13071a;
+    background-color: #15071d;
     color: white;
     border: none;
     cursor: pointer;
