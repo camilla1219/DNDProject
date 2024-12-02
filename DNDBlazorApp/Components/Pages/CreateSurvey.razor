@@ -1,6 +1,9 @@
 @page "/createSurvey"
 @rendermode InteractiveServer
+@using WebAPI.Services
 @using WebAPI.models
+
+@inject FileService SurveyService
 
 <head>
     <link href="survey.css" rel="stylesheet" />
@@ -68,9 +71,27 @@
 
     private async Task Create()
     {
-        Console.WriteLine("Survey Created!");
+        var newSurvey = new Survey
+        {
+            Title = title,
+            Description = description,
+            Questions = questions
+        };
+
+        var surveys = SurveyService.LoadSurveys();
+        surveys.Add(newSurvey);
+        SurveyService.SaveSurveys(surveys);
+
+        Console.WriteLine($"Survey Created: {newSurvey.Title}");
+        ResetForm();
     }
 
+    private void ResetForm()
+    {
+        title = "";
+        description = "";
+        questions.Clear();
+    }
     private void AddQuestion()
     {
         questions.Add(new Question { Text = "Enter Question", Options = new List<string>() });
