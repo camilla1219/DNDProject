@@ -51,7 +51,9 @@
                                 {
                                     <input type="checkbox" disabled />
                                 }
-                                <input type="text" placeholder="Enter Option" @bind="question.Options[i]" />
+                                <input type="text" placeholder="Enter Option" value="@question.Options[i]" 
+                                     @oninput="(e) => UpdateOption(question, i, e.Value.ToString())" />
+
                                 <button @onclick="() => RemoveOption(question, question.Options[i])">X</button>
                             </div>
                         }
@@ -136,6 +138,14 @@ private void AddQuestion()
     });
 }
 
+private void UpdateOption(Question question, int index, string value)
+{
+    if (index >= 0 && index < question.Options.Count)
+    {
+        question.Options[index] = value;
+    }
+}
+
     private void RemoveQuestion(Question question)
     {
         questions.Remove(question);
@@ -148,10 +158,11 @@ private void AddQuestion()
 
    private void RemoveOption(Question question, string option)
 {
-    // Ensure the option exists in the list before trying to remove it.
     if (question.Options.Contains(option))
     {
         question.Options.Remove(option);
+        StateHasChanged(); // Notify Blazor of the UI update
     }
 }
+
 }
