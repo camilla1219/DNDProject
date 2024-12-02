@@ -21,10 +21,10 @@
         <div class="card">
             <div class="form-group field">
                 <label>Title</label>
-                <input type="text" @bind="title" @bind:event="oninput"/> 
+                <input type="text" placeholder="Enter Survey Title" @bind="title" @bind:event="oninput" /> 
                 
                 <label>Description</label>
-                <input type="text" @bind="description" @bind:event="oninput"/> 
+                <input type="text" placeholder="Enter Survey Description" @bind="description" @bind:event="oninput" /> 
             </div>
         </div>
 
@@ -35,13 +35,13 @@
                     <h4>@question.Text</h4>
 
                     <div class="form-group field">
-                        <input type="text" @bind="question.Text" @bind:event="oninput" />
+                        <input type="text" placeholder="Enter Question" @bind="question.Text" @bind:event="oninput" />
                     
                         <div class="options">
                             @for (int i = 0; i < question.Options.Count; i++)
                             {
                                 <div>
-                                    <input type="text" @bind="question.Options[i]" />
+                                       <input type="text" placeholder="Enter Option" @bind="question.Options[i]" />
                                     <button @onclick="() => RemoveOption(question, question.Options[i])">X</button>
                                 </div>
                             }
