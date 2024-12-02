@@ -2,7 +2,9 @@
 @rendermode InteractiveServer
 
 @using WebAPI.models
+@using WebAPI.Services
 
+@inject FileService SurveyService
 
 <head>
     <link href="survey.css" rel="stylesheet" />
@@ -95,12 +97,12 @@
     private string description = "";
     private List<Question> questions = new List<Question>();
         //temp task
-          private async Task Create()
+     /*     private async Task Create()
     {
         Console.WriteLine("Survey Created!");
-    }
+    }*/
 
-    /*private async Task Create()
+    private async Task Create()
     {
         var newSurvey = new Survey
         {
@@ -122,7 +124,7 @@
         title = "";
         description = "";
         questions.Clear();
-    }*/
+    }
  /* private void AddQuestion()
 {
     questions.Add(new Question { Text = "", Options = new List<string>() });
