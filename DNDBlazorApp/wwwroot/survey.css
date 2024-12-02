@@ -26,6 +26,19 @@
     justify-content: space-between;
 }
 
+.remove-question-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: red;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
 /* Purple box styling */
 .button-box {
     display: flex;

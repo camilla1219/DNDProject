@@ -28,6 +28,9 @@
         </div>
 
          <div class="questions">
+             <!-- X Button for Removing Question -->
+            <button class="remove-question-btn" @onclick="() => RemoveQuestion(question)">X</button>
+            
         @foreach (var question in questions)
         {
             <div class="card">
