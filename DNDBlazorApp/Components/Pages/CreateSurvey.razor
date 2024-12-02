@@ -23,9 +23,6 @@
                 <label>Description</label>
                 <input type="text" @bind="description" @bind:event="oninput"/> 
             </div>
-            <div class="button-row">
-                <button @onclick="AddQuestion" class="acceptbtn">Create Question</button>
-            </div>
         </div>
 
         <div class="questions">
@@ -35,7 +32,6 @@
                     <h4>@question.Text</h4>
 
                     <div class="form-group field">
-                        <label>Question</label>
                         <input type="text" @bind="question.Text" @bind:event="oninput" />
                     
                         <div class="options">
@@ -58,7 +54,7 @@
     <!-- Right Section (Purple Box) -->
     <div class="right-content">
         <div class="button-box">
-            <button @onclick="AddQuestion" class="acceptbtn">Add Another Question</button>
+            <button @onclick="AddQuestion" class="acceptbtn">Add Question</button>
             
             <button @onclick="Create" class="acceptbtn">Create</button>
         </div>
