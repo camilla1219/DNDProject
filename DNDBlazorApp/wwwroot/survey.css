@@ -1,0 +1,122 @@
+/* wwwroot/survey.css */
+
+
+/* Overall container with flex layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Left content (survey form) */
+.left-content {
+    flex: 1;  /* Take up remaining space */
+    padding-right: 20px;
+}
+
+/* Right content (purple box) */
+.right-content {
+    width: 300px;  /* Fixed width for the purple box */
+    background: rgba(63, 20, 92, 0.925);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.remove-question-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: red;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 5px; 
+    
+}
+
+
+/* Purple box styling */
+.button-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    padding-top: 10px;
+    width:150px;
+}
+
+/* Header for the survey form */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;              /* White text */
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+}
+
+.header h3 {
+    margin: 0;
+}
+
+/* Form field styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Options layout */
+.options div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between checkbox/radio and input */
+    margin-bottom: 10px; /* Space between each option */
+}
+
+/* Text input field spacing */
+input[type="text"] {
+    margin-bottom: 10px; /* Space between text fields */
+    padding: 10px;
+    width: 100%; /* Full width for consistency */
+}
+.field {
+    margin-top: 10px;
+}
+
+.card {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+.acceptbtn {
+    padding: 10px 20px;
+    background-color: #15071d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.acceptbtn:hover {
+    background-color: #45a049;
+}
+
+/* Button row styling */
+.button-row {
+    margin-top: 10px;
+}
+
+/* Option buttons */
+.add-option-btn {
+    margin-top: 10px;
+}
