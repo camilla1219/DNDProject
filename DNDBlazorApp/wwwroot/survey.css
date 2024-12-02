@@ -1,0 +1,6 @@
+/* wwwroot/survey.css */
+
+.card h3, .card h4 {
+    margin-top: 0;
+    color: #333;
+}
