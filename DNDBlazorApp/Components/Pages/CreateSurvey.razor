@@ -27,37 +27,58 @@
             </div>
         </div>
 
-        <div class="questions">
-            @foreach (var question in questions)
-            {
-                <div class="card">
-                    <h4>@question.Text</h4>
+         <div class="questions">
+        @foreach (var question in questions)
+        {
+            <div class="card">
+                <h4>@question.Text</h4>
+                <input type="text" placeholder="Enter Question" @bind="question.Text" @bind:event="oninput" />
 
-                    <div class="form-group field">
-                        <input type="text" placeholder="Enter Question" @bind="question.Text" @bind:event="oninput" />
-                    
-                        <div class="options">
-                            @for (int i = 0; i < question.Options.Count; i++)
-                            {
-                                <div>
-                                       <input type="text" placeholder="Enter Option" @bind="question.Options[i]" />
-                                    <button @onclick="() => RemoveOption(question, question.Options[i])">X</button>
-                                </div>
-                            }
-                        </div>
-
-                        <button @onclick="(() => AddOption(question))" class="add-option-btn">Add Option</button>
+                @if (question.Type == "MultipleChoice" || question.Type == "Checkboxes")
+                {
+                    <div class="options">
+                        @for (int i = 0; i < question.Options.Count; i++)
+                        {
+                            <div>
+                                @if (question.Type == "MultipleChoice")
+                                {
+                                    <input type="radio" disabled />
+                                }
+                                else if (question.Type == "Checkboxes")
+                                {
+                                    <input type="checkbox" disabled />
+                                }
+                                <input type="text" placeholder="Enter Option" @bind="question.Options[i]" />
+                                <button @onclick="() => RemoveOption(question, question.Options[i])">X</button>
+                            </div>
+                        }
                     </div>
-                </div>
-            }
-        </div>
+                    <button @onclick="(() => AddOption(question))" class="add-option-btn">Add Option</button>
+                }
+                else if (question.Type == "ShortAnswer")
+                {
+                    <input type="text" placeholder="Short Answer (Respondent will type here)" disabled />
+                }
+            </div>
+        }
     </div>
+</div>
 
     <!-- Right Section (Purple Box) -->
     <div class="right-content">
+        
         <div class="button-box">
+             <!-- Dropdown and Add Button -->
+        <div class="dropdown-container">
+            <select @bind="selectedQuestionType">
+                <option value="MultipleChoice">Multiple Choice</option>
+                <option value="Checkboxes">Checkboxes</option>
+                <option value="ShortAnswer">Short Answer</option>
+            </select>
             <button @onclick="AddQuestion" class="acceptbtn">Add Question</button>
-            
+        </div>
+        
+        
             <button @onclick="Create" class="acceptbtn">Create</button>
         </div>
     </div>
@@ -96,11 +117,21 @@
         description = "";
         questions.Clear();
     }*/
-  private void AddQuestion()
+ /* private void AddQuestion()
 {
     questions.Add(new Question { Text = "", Options = new List<string>() });
-}
+}*/
+private string selectedQuestionType = "MultipleChoice"; // Default option
 
+private void AddQuestion()
+{
+    questions.Add(new Question
+    {
+        Text = "",
+        Type = selectedQuestionType,
+        Options = selectedQuestionType == "ShortAnswer" ? null : new List<string>()
+    });
+}
 
     private void RemoveQuestion(Question question)
     {
