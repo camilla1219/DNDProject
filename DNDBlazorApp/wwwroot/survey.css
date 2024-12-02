@@ -36,7 +36,8 @@
     font-size: 16px;
     cursor: pointer;
     font-weight: bold;
-    padding: 5px;
+    margin-top: 5px; 
+    
 }
 
 

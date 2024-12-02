@@ -148,7 +148,8 @@ private void AddQuestion()
 
    private void RemoveOption(Question question, string option)
 {
-    if (question.Options != null && question.Options.Contains(option))
+    // Ensure the option exists in the list before trying to remove it.
+    if (question.Options.Contains(option))
     {
         question.Options.Remove(option);
     }
