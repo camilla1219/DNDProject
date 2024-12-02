@@ -55,6 +55,20 @@
     margin-bottom: 20px;
 }
 
+/* Options layout */
+.options div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between checkbox/radio and input */
+    margin-bottom: 10px; /* Space between each option */
+}
+
+/* Text input field spacing */
+input[type="text"] {
+    margin-bottom: 10px; /* Space between text fields */
+    padding: 10px;
+    width: 100%; /* Full width for consistency */
+}
 .field {
     margin-top: 10px;
 }
