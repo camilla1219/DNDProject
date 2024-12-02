@@ -68,8 +68,13 @@
     private string title = "";
     private string description = "";
     private List<Question> questions = new List<Question>();
+        //temp task
+          private async Task Create()
+    {
+        Console.WriteLine("Survey Created!");
+    }
 
-    private async Task Create()
+    /*private async Task Create()
     {
         var newSurvey = new Survey
         {
@@ -91,7 +96,7 @@
         title = "";
         description = "";
         questions.Clear();
-    }
+    }*/
     private void AddQuestion()
     {
         questions.Add(new Question { Text = "Enter Question", Options = new List<string>() });
