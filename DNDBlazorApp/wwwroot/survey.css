@@ -17,7 +17,7 @@
 /* Right content (purple box) */
 .right-content {
     width: 300px;  /* Fixed width for the purple box */
-    background: rgba(53, 0, 139, 0.534)
+    background: rgba(53, 0, 139, 0.534);
     color: white;
     padding: 20px;
     border-radius: 10px;
