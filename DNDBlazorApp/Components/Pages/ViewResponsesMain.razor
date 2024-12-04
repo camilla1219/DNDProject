@@ -1,0 +1,42 @@
+@page "/FindSurvey"
+@using WebAPI.models
+@using WebAPI.Services
+@inject FileService SurveyService
+@inject NavigationManager Navigation
+
+
+<head>
+    <link href="Main.css" rel="stylesheet" />
+</head>
+
+<PageTitle>Find Surveys</PageTitle>
+
+<div class="container">
+    <h3>Available Surveys</h3>
+
+    @if (surveys == null || !surveys.Any())
+    {
+        <p>No surveys available.</p>
+    }
+    else
+    {
+        <ul>
+            @foreach (var survey in surveys)
+            {
+                <li>
+                    <a href="@($"/ViewResponses/{survey.Id}")">@survey.Title</a>
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+@code {
+    private List<Survey> surveys = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Load all surveys
+        surveys = SurveyService.LoadSurveys();
+    }
+}

@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "Id": 0,
+    "SurveyId": 1,
+    "RespondentName": "liam",
+    "SubmittedAt": "2024-12-04T18:38:55.2291426Z",
+    "Answers": [
+      {
+        "QuestionId": 0,
+        "SelectedOption": "sbdjsdjd"
+      },
+      {
+        "QuestionId": 0,
+        "SelectedOption": "dsdbcsbjdhc"
+      }
+    ]
+  },
+  {
+    "Id": 0,
+    "SurveyId": 1,
+    "RespondentName": "loim",
+    "SubmittedAt": "2024-12-04T18:52:31.6883874Z",
+    "Answers": [
+      {
+        "QuestionId": 0,
+        "SelectedOption": "sbdjsdjd"
+      },
+      {
+        "QuestionId": 0,
+        "SelectedOption": "dsdbcsbjdhc"
+      }
+    ]
+  }
+]

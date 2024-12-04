@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj": {}
+    "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj": {}
   },
   "projects": {
-    "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj": {
+    "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj",
+        "projectUniqueName": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
         "projectName": "Survey",
-        "projectPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj",
-        "packagesPath": "C:\\Users\\camil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
+        "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\camil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

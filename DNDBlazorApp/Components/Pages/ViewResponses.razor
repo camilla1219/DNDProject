@@ -1,0 +1,64 @@
+@page "/ViewResponses/{id:int}"
+@using WebAPI.models
+@using WebAPI.Services
+@inject FileService ResponseService
+@inject FileService SurveyService
+
+<PageTitle>Survey Responses</PageTitle>
+
+<div class="container">
+    <h3>Responses for Survey: @survey?.Title</h3>
+
+    @if (responses == null || !responses.Any())
+    {
+        <p>No responses yet for this survey.</p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Respondent Name</th>
+                    <th>Submission Date</th>
+                    <th>Responses</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var response in responses)
+                {
+                    <tr>
+                        <td>@response.RespondentName</td>
+                        <td>@response.SubmittedAt</td>
+                        <td>
+                            <ul>
+                                @foreach (var answer in response.Answers)
+                                {
+                                    <li>@answer.QuestionId: @answer.SelectedOption</li>
+                                }
+                            </ul>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    [Parameter] public int id { get; set; }
+    private Survey? survey;
+    private List<SurveyResponse> responses = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Load the survey based on the ID
+        survey = SurveyService.LoadSurveys().FirstOrDefault(s => s.Id == id);
+
+        if (survey != null)
+        {
+            // Load the responses for the specific survey ID
+            var allResponses = ResponseService.LoadResponses();
+            responses = allResponses.Where(r => r.SurveyId == id).ToList();
+        }
+    }
+}

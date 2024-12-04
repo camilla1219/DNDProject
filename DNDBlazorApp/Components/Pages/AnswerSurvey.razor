@@ -1,0 +1,178 @@
+﻿@page "/AnswerSurvey/{id:int}"
+@using WebAPI.models
+@using WebAPI.Services
+@rendermode InteractiveServer
+
+@inject FileService SurveyService
+@inject FileService ResponseService
+@inject NavigationManager Navigation
+
+<head>
+    <link href="response.css" rel="stylesheet" />
+</head>
+
+<PageTitle>Answer Survey</PageTitle>
+
+<div class="container">
+    <h3>Answer Survey</h3>
+
+    @if (survey == null)
+    {
+        <p>Loading survey...</p>
+    }
+    else
+    {
+        <div class="card">
+            <h2>@survey.Title</h2>
+            <p>@survey.Description</p>
+        </div>
+
+        <div class="questions">
+            @foreach (var question in survey.Questions)
+            {
+                <div class="card">
+                    <h4>@question.Text</h4>
+
+                    @if (question.Type == "MultipleChoice")
+                    {
+                        @foreach (var option in question.Options)
+                        {
+                            <div>
+                                <input type="radio"
+                                       name="@($"question_{question.Id}")"
+                                       value="@option.Text"
+                                       @onchange="(e) => SetAnswer(question.Id, e.Value?.ToString())" />
+                                <label>@option.Text</label>
+                            </div>
+                        }
+                    }
+                    else if (question.Type == "Checkboxes")
+                    {
+                        @foreach (var option in question.Options)
+                        {
+                            <div>
+                                <input type="checkbox"
+                                       @onclick="@(() => ToggleCheckboxAnswer(question.Id, option.Text))"
+                                       checked="@IsOptionSelected(question.Id, option.Text)" />
+                                <label>@option.Text</label>
+                            </div>
+                        }
+                    }
+                    else if (question.Type == "ShortAnswer")
+                    {
+                        <input type="text"
+                               placeholder="Type your answer here"
+                               @bind:get="@GetAnswer(question.Id)"
+                               @bind:set="(value) => SetAnswer(question.Id, value)" />
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="card">
+            <label>Enter Your Name</label>
+            <input type="text" @bind="respondentName" placeholder="Enter your name" />
+        </div>
+
+        <button @onclick="SubmitAnswers" class="acceptbtn">Submit</button>
+    }
+</div>
+
+@code {
+    [Parameter] public int id { get; set; }
+    private Survey? survey;
+    private Dictionary<int, string> userAnswers = new();
+    private Dictionary<int, List<string>> checkboxAnswers = new();
+    private string respondentName = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var surveys = SurveyService.LoadSurveys();
+        survey = surveys.FirstOrDefault(s => s.Id == id);
+    }
+
+    private string? GetAnswer(int questionId)
+    {
+        return userAnswers.ContainsKey(questionId) ? userAnswers[questionId] : null;
+    }
+
+    private void SetAnswer(int questionId, string? selectedOption)
+    {
+        if (selectedOption != null)
+        {
+            userAnswers[questionId] = selectedOption;
+        }
+    }
+
+    private bool IsOptionSelected(int questionId, string optionText)
+    {
+        return checkboxAnswers.ContainsKey(questionId) && checkboxAnswers[questionId].Contains(optionText);
+    }
+
+    private void ToggleCheckboxAnswer(int questionId, string optionText)
+    {
+        if (!checkboxAnswers.ContainsKey(questionId))
+        {
+            checkboxAnswers[questionId] = new List<string>();
+        }
+
+        if (checkboxAnswers[questionId].Contains(optionText))
+        {
+            checkboxAnswers[questionId].Remove(optionText);
+        }
+        else
+        {
+            checkboxAnswers[questionId].Add(optionText);
+        }
+    }
+
+    private async Task SubmitAnswers()
+    {
+        if (survey == null)
+        {
+            Console.WriteLine("No survey loaded.");
+            return;
+        }
+
+        var newResponse = new SurveyResponse
+        {
+            SurveyId = survey.Id,
+            RespondentName = respondentName,
+            SubmittedAt = DateTime.UtcNow,
+            Answers = userAnswers.Select(kvp => new ResponseAnswer
+            {
+                QuestionId = kvp.Key,
+                SelectedOption = kvp.Value
+            })
+            .Concat(checkboxAnswers.SelectMany(kvp => kvp.Value.Select(option => new ResponseAnswer
+            {
+                QuestionId = kvp.Key,
+                SelectedOption = option
+            })))
+            .ToList()
+        };
+
+        try
+        {
+            var responses = ResponseService.LoadResponses();
+            responses.Add(newResponse);
+            ResponseService.SaveResponses(responses);
+            Console.WriteLine("Responses saved!");
+            ResetForm();
+
+            // Navigate back to the main survey page
+            Navigation.NavigateTo("/AnswerSurvey");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving responses: {ex.Message}");
+        }
+    }
+
+    private void ResetForm()
+    {
+        respondentName = "";
+        userAnswers.Clear();
+        checkboxAnswers.Clear();
+    }
+}

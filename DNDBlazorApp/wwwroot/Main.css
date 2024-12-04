@@ -1,0 +1,201 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f9; /* Soft background for the whole page */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+/* Header for the page */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.header-container h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Search bar container */
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.search-bar-container input[type="text"] {
+  padding: 10px;
+  width: 80%; /* Take up most of the space */
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  color: #333;
+}
+
+.search-bar-container button {
+  padding: 10px 20px;
+  background-color: #15071d; /* Dark purple */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-bar-container button:hover {
+  background-color: #9b59b6; /* Light purple */
+}
+
+/* Left content (survey form) */
+.left-content {
+  flex: 1; /* Take up remaining space */
+  padding-right: 20px;
+}
+
+/* Right content (purple box) */
+.right-content {
+  width: 300px; /* Fixed width for the purple box */
+  background: rgba(63, 20, 92, 0.925);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Button to remove question */
+.remove-question-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: red;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+/* Purple box styling for button section */
+.button-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  padding-top: 10px;
+  width: 150px;
+}
+
+/* Form field styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Options layout (checkbox/radio buttons) */
+.options div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between checkbox/radio and input */
+  margin-bottom: 10px; /* Space between each option */
+}
+
+/* Text input field styling */
+input[type="text"] {
+  margin-bottom: 10px; /* Space between text fields */
+  padding: 10px;
+  width: 100%; /* Full width for consistency */
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Focus state for text input */
+input[type="text"]:focus {
+  border-color: #8e44ad;
+  outline: none;
+  box-shadow: 0 0 5px rgba(142, 68, 173, 0.3);
+}
+
+/* Card for each question or field */
+.card {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Accept button styling */
+.acceptbtn {
+  padding: 10px 20px;
+  background-color: #15071d; /* Dark purple */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+/* Accept button hover effect */
+.acceptbtn:hover {
+  background-color: #9b59b6; /* Light purple */
+}
+
+/* Button row styling */
+.button-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Add option button */
+.add-option-btn {
+  margin-top: 10px;
+}
+
+/* Mobile-responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-content {
+    padding-right: 0;
+  }
+
+  .right-content {
+    width: 100%;
+  }
+
+  .button-box {
+    width: 100%;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .search-bar-container input[type="text"] {
+    width: 70%;
+  }
+
+  .search-bar-container button {
+    width: 25%;
+  }
+}

@@ -1,0 +1,34 @@
+@page "/AnswerSurvey"
+@inject NavigationManager Navigation
+@rendermode InteractiveServer
+
+<head>
+    <link href="Main.css" rel="stylesheet" />
+</head>
+
+<PageTitle>Find Survey</PageTitle>
+
+<div class="container">
+    <h3>Find Your Survey</h3>
+    <input type="text" @bind="surveyId" placeholder="Enter Survey ID" />
+    <button @onclick="GoToSurvey" class="acceptbtn">Go</button>
+</div>
+
+@code {
+    private string surveyId = "";
+
+private void GoToSurvey()
+{
+    if (int.TryParse(surveyId, out int id))
+    {
+        Console.WriteLine($"Navigating to /AnswerSurvey/{id}");
+        Navigation.NavigateTo($"/AnswerSurvey/{id}");
+    }
+    else
+    {
+        Console.WriteLine("Invalid Survey ID: Not a valid integer.");
+      
+    }
+}
+
+}

@@ -17,51 +17,67 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DNDBlazorApp
 build_property.RootNamespace = DNDBlazorApp
-build_property.ProjectDir = C:\Users\camil\DNDProject\DNDProject\DNDBlazorApp\
+build_property.ProjectDir = C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\camil\DNDProject\DNDProject\DNDBlazorApp
+build_property.MSBuildProjectDirectory = C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/App.razor]
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/AnswerSurvey.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbnN3ZXJTdXJ2ZXkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/Pages/CreateSurvey.razor]
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/AnswerSurveyMain.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBbnN3ZXJTdXJ2ZXlNYWluLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/CreateSurvey.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDcmVhdGVTdXJ2ZXkucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/Pages/Error.razor]
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/Pages/Home.razor]
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/Pages/Weather.razor]
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/ViewResponses.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWaWV3UmVzcG9uc2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/ViewResponsesMain.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWaWV3UmVzcG9uc2VzTWFpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/ViewSurvey.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWaWV3U3VydmV5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/Routes.razor]
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/_Imports.razor]
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/Layout/MainLayout.razor]
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-6vslmteyvj
 
-[C:/Users/camil/DNDProject/DNDProject/DNDBlazorApp/Components/Layout/NavMenu.razor]
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-p9ixeeh7wg
