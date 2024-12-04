@@ -1,14 +1,38 @@
 [
   {
     "Id": 1,
-    "Title": "string",
-    "Description": "string",
+    "Title": "sgfjhcs",
+    "Description": "disfhskf",
     "Questions": [
       {
-        "Id": 1,
-        "Text": "string",
-        "Type": "ShortAnswer", 
-        "Options": []
+        "Id": 0,
+        "Text": "shfsjfbsj",
+        "Type": "MultipleChoice",
+        "Options": [
+          {
+            "Id": 1,
+            "Text": "sbdjsdjd"
+          },
+          {
+            "Id": 2,
+            "Text": "dssbsjbcs"
+          }
+        ]
+      },
+      {
+        "Id": 0,
+        "Text": "dsjhfshj",
+        "Type": "Checkboxes",
+        "Options": [
+          {
+            "Id": 1,
+            "Text": "dsbdjds"
+          },
+          {
+            "Id": 2,
+            "Text": "dsdbcsbjdhc"
+          }
+        ]
       }
     ]
   }

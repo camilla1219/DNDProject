@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "vsumjm4+sHHwoxseRwhI3zxv6NJRbyoWqJRuYdBINFI=",
+  "Hash": "HIVnkguE6LDVQWkP5mhOvlRIECNSS6rWR4MqQ3Xz6mI=",
   "Source": "DNDBlazorApp",
   "BasePath": "_content/DNDBlazorApp",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj",
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
       "Version": 2,
       "Source": "Survey",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -22,17 +22,17 @@
     {
       "Name": "DNDBlazorApp\\wwwroot",
       "Source": "DNDBlazorApp",
-      "ContentRoot": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DNDBlazorApp.styles.css",
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DNDBlazorApp.styles.css",
       "SourceId": "DNDBlazorApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/DNDBlazorApp",
       "RelativePath": "DNDBlazorApp.styles.css",
       "AssetKind": "All",
@@ -45,13 +45,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DNDBlazorApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DNDBlazorApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DNDBlazorApp.bundle.scp.css",
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DNDBlazorApp.bundle.scp.css",
       "SourceId": "DNDBlazorApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/DNDBlazorApp",
       "RelativePath": "DNDBlazorApp.bundle.scp.css",
       "AssetKind": "All",
@@ -64,13 +64,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DNDBlazorApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DNDBlazorApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\app.css",
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\app.css",
       "SourceId": "DNDBlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -86,10 +86,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "DNDBlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -105,10 +105,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "DNDBlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -124,10 +124,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\favicon.png",
       "SourceId": "DNDBlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -143,10 +143,29 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\survey.css",
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\MySurvey.css",
       "SourceId": "DNDBlazorApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "BasePath": "_content/DNDBlazorApp",
+      "RelativePath": "MySurvey.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MySurvey.css"
+    },
+    {
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey.css",
+      "SourceId": "DNDBlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
       "RelativePath": "survey.css",
       "AssetKind": "All",

@@ -8104,19 +8104,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\camil\\.nuget\\packages\\": {}
+    "C:\\Users\\liamm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
+      "projectUniqueName": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
       "projectName": "DNDBlazorApp",
-      "projectPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
-      "packagesPath": "C:\\Users\\camil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\obj\\",
+      "projectPath": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
+      "packagesPath": "C:\\Users\\liamm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\camil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\liamm\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -8128,8 +8128,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj": {
-              "projectPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj"
+            "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj": {
+              "projectPath": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj"
             }
           }
         }
