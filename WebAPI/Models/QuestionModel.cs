@@ -9,7 +9,7 @@ namespace WebAPI.models
          public required string Type { get; set; }
 
 
-        public List<string> Options {get; set; } = new List<string>();
+        public List<Option> Options {get; set; } = new List<Option>();
 
     }
 }

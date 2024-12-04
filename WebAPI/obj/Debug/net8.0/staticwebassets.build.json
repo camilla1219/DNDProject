@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "31QH1iwF7ZWfraOOf3V1zm14LiMntZ8pMDWsCxFqtHk=",
+  "Hash": "nKpDicdz+BHCnJI9b3vKu/oeCyc3Y1BpdtHOPutd89A=",
   "Source": "Survey",
   "BasePath": "_content/Survey",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }
