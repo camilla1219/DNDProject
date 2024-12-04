@@ -5,12 +5,12 @@
       "PackagePath": "staticwebassets\\DNDBlazorApp.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\MySurvey.css",
-      "PackagePath": "staticwebassets\\MySurvey.css"
+      "Id": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\Main.css",
+      "PackagePath": "staticwebassets\\Main.css"
     },
     {
-      "Id": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\MySurveyMain.css",
-      "PackagePath": "staticwebassets\\MySurveyMain.css"
+      "Id": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\MySurvey.css",
+      "PackagePath": "staticwebassets\\MySurvey.css"
     },
     {
       "Id": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\app.css",

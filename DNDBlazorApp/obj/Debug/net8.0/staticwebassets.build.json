@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qr36iB0RKjdtB8M6X9ne40+Gezx7q6ldyahLngvF8Mo=",
+  "Hash": "52T1JCtU9YUDCwE2IRTOsPW4tM8h+bo/gp3bnVci3R4=",
   "Source": "DNDBlazorApp",
   "BasePath": "_content/DNDBlazorApp",
   "Mode": "Default",
@@ -143,6 +143,25 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\Main.css",
+      "SourceId": "DNDBlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "BasePath": "_content/DNDBlazorApp",
+      "RelativePath": "Main.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Main.css"
+    },
+    {
       "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\MySurvey.css",
       "SourceId": "DNDBlazorApp",
       "SourceType": "Discovered",
@@ -160,25 +179,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MySurvey.css"
-    },
-    {
-      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\MySurveyMain.css",
-      "SourceId": "DNDBlazorApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
-      "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "MySurveyMain.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\MySurveyMain.css"
     },
     {
       "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey.css",
