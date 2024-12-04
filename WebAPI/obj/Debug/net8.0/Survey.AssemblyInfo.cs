@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Survey")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+211352d7adc9e0b02d44011c540beae61e027ad4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40ba4d00c74c7270757ae9e68d4cbe248f2bbaad")]
 [assembly: System.Reflection.AssemblyProductAttribute("Survey")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Survey")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
