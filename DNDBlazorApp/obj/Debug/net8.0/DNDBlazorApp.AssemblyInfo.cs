@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DNDBlazorApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c01016e8b8f22d65db4e5f928b7d1e2c8e1bc194")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9674fb19379ca0e12c948ce50f6593df745efddb")]
 [assembly: System.Reflection.AssemblyProductAttribute("DNDBlazorApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DNDBlazorApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

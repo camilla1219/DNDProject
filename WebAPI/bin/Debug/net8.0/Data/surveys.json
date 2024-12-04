@@ -7,8 +7,7 @@
       {
         "Id": 1,
         "Text": "string",
-        "Type": "ShortAnswer", 
-        "Options": []
+        "Options": ["string"]
       }
     ]
   }
