@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\MySurvey.css"
     },
     {
+      "Id": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\MySurveyMain.css",
+      "PackagePath": "staticwebassets\\MySurveyMain.css"
+    },
+    {
       "Id": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },

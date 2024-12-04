@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HIVnkguE6LDVQWkP5mhOvlRIECNSS6rWR4MqQ3Xz6mI=",
+  "Hash": "Qr36iB0RKjdtB8M6X9ne40+Gezx7q6ldyahLngvF8Mo=",
   "Source": "DNDBlazorApp",
   "BasePath": "_content/DNDBlazorApp",
   "Mode": "Default",
@@ -160,6 +160,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MySurvey.css"
+    },
+    {
+      "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\MySurveyMain.css",
+      "SourceId": "DNDBlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "BasePath": "_content/DNDBlazorApp",
+      "RelativePath": "MySurveyMain.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MySurveyMain.css"
     },
     {
       "Identity": "C:\\Users\\liamm\\OneDrive\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey.css",
