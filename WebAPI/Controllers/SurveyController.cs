@@ -31,8 +31,33 @@ namespace WebAPI.Controllers
             return Ok(survey);
         }
 
+
+        [HttpPost]
         [HttpPost]
         public ActionResult AddSurvey(Survey newSurvey)
+        {
+            // Assign unique IDs to questions and their options
+            for (int i = 0; i < newSurvey.Questions.Count; i++)
+            {
+                var question = newSurvey.Questions[i];
+                question.Id = i + 1;
+
+                // Assign IDs to options
+                for (int j = 0; j < question.Options.Count; j++)
+                {
+                    question.Options[j].Id = j + 1;
+                }
+            }
+
+    newSurvey.Id = _surveys.Any() ? _surveys.Max(s => s.Id) + 1 : 1;
+    _surveys.Add(newSurvey);
+    _fileservice.SaveSurveys(_surveys);
+    return CreatedAtAction(nameof(GetSurvey), new { id = newSurvey.Id }, newSurvey);
+        }
+
+
+
+        /*public ActionResult AddSurvey(Survey newSurvey)
         {
                 for (int i = 0; i < newSurvey.Questions.Count; i++)
             {
@@ -42,7 +67,7 @@ namespace WebAPI.Controllers
             _surveys.Add(newSurvey);
             _fileservice.SaveSurveys(_surveys);
             return CreatedAtAction(nameof(GetSurvey), new { id = newSurvey.Id }, newSurvey);
-        }
+        }*/
 
         [HttpPut("{id}")]
         public ActionResult UpdateSurvey(int id, Survey updatedSurvey)

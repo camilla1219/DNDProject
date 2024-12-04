@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj": {}
+    "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj": {
+    "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
+        "projectUniqueName": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
         "projectName": "DNDBlazorApp",
-        "projectPath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
+        "projectPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\DNDBlazorApp.csproj",
         "packagesPath": "C:\\Users\\camil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\",
+        "outputPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\DNDBlazorApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\camil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj": {
-                "projectPath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj"
+              "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj": {
+                "projectPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj"
               }
             }
           }
@@ -40,9 +40,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -66,18 +65,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj": {
+    "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
+        "projectUniqueName": "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj",
         "projectName": "Survey",
-        "projectPath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\Survey.csproj",
+        "projectPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\Survey.csproj",
         "packagesPath": "C:\\Users\\camil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\camil\\Documents\\GitHub\\DNDProject\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\camil\\DNDProject\\DNDProject\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\camil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -102,9 +101,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -158,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
