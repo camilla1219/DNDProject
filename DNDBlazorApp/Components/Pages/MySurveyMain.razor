@@ -1,0 +1,39 @@
+@page "/MySurveyMain"
+@inject NavigationManager Navigation
+@using WebAPI.models
+@using WebAPI.Services
+@inject FileService SurveyService
+@rendermode InteractiveServer
+
+<PageTitle>Find Survey</PageTitle>
+
+<head>
+    <link href="Main.css" rel="stylesheet" />
+</head>
+
+<div class="container">
+    <h3>Find Your Survey</h3>
+    <input type="text" @bind="surveyTitle" placeholder="Enter Survey Title" />
+    <button @onclick="GoToSurvey" class="acceptbtn">Go</button>
+</div>
+
+@code {
+    private string surveyTitle = ""; // Bind the input field for the survey title
+
+    private void GoToSurvey()
+    {
+        // Search surveys by title (case-insensitive)
+        var survey = SurveyService.LoadSurveys()
+            .FirstOrDefault(s => s.Title.Equals(surveyTitle, StringComparison.OrdinalIgnoreCase));
+
+        if (survey != null)
+        {
+            Console.WriteLine($"Navigating to survey titled: {surveyTitle}");
+            Navigation.NavigateTo($"/MySurvey/{survey.Id}");
+        }
+        else
+        {
+            Console.WriteLine("Survey not found with the provided title.");
+        }
+    }
+}

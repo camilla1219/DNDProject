@@ -1,0 +1,72 @@
+@page "/MySurvey/{id:int}"
+@using WebAPI.models
+@using WebAPI.Services
+@rendermode InteractiveServer
+
+@inject FileService SurveyService
+
+<head>
+    <link href="response.css" rel="stylesheet" />
+</head>
+
+<PageTitle>Answer Survey</PageTitle>
+
+<div class="container">
+    <h3>Survey Details</h3>
+
+    @if (survey == null)
+    {
+        <p>Loading survey...</p>
+    }
+    else
+    {
+        <div class="card">
+            <h2>@survey.Title</h2>
+            <p>@survey.Description</p>
+        </div>
+
+        <div class="questions">
+            @foreach (var question in survey.Questions)
+            {
+                <div class="card">
+                    <h4>@question.Text</h4>
+
+                    @if (question.Type == "MultipleChoice")
+                    {
+                        <ul>
+                            @foreach (var option in question.Options)
+                            {
+                                <li>@option.Text</li>
+                            }
+                        </ul>
+                    }
+                    else if (question.Type == "Checkboxes")
+                    {
+                        <ul>
+                            @foreach (var option in question.Options)
+                            {
+                                <li>@option.Text</li>
+                            }
+                        </ul>
+                    }
+                    else if (question.Type == "ShortAnswer")
+                    {
+                        <p>@(question.Options?.FirstOrDefault()?.Text ?? "No options provided.")</p>
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public int id { get; set; }
+    private Survey? survey;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Load the survey by ID as usual, since now we are passing the ID in the URL
+        var surveys = SurveyService.LoadSurveys();
+        survey = surveys.FirstOrDefault(s => s.Id == id);
+    }
+}

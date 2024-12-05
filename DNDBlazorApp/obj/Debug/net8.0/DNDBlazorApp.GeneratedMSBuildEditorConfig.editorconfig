@@ -50,20 +50,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/MySurvey.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNeVN1cnZleS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/MySurveyMain.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNeVN1cnZleU1haW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/ViewResponses.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWaWV3UmVzcG9uc2VzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/ViewResponsesMain.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWaWV3UmVzcG9uc2VzTWFpbi5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/ViewSurvey.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWaWV3U3VydmV5LnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jacob/Documents/GitHub/DNDProject/DNDBlazorApp/Components/Routes.razor]

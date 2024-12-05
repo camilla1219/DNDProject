@@ -1,7 +1,84 @@
 ﻿@page "/"
+<style>
+    .homeDivSections {
+        width: 30%;
+        height: 150px;
+        border: 1px solid grey;
+        padding: 5px;
+        margin: 5px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+    }
+    .homeDivMaster {
+        width: 100%;
+        border: 1px solid red; 
+        text-align: center; /* Align divs in the center horizontally */
+    }
+    .headerText {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .numberText {
+        font-size: 48px;
+        color: #0078D4; /* Optional: Add a nice color */
+    }
+    .mergedDiv {
+        width: 93%; /* Adjust width for the merged div */
+        height: calc(100vh - 200px); /* Expand to fill the remaining screen space */
+        border: 1px solid grey;
+        padding: 10px;
+        margin: 5px auto; /* Center horizontally */
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #0078D4; /* Optional color for emphasis */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Move content towards the top */
+        align-items: center;
+    }
+    .mergedDiv img {
+        margin-top: 20px; /* Adjust spacing between text and image */
+        max-height: 90%; /* Increase max height */
+        max-width: 100%; /* Ensure the image fits within the container */
+        object-fit: contain;
+    }
+</style>
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="homeDivMaster">
+    <!-- First row -->
+    <div class="homeDivSections">
+        <div class="headerText">Total answers</div>
+        <div class="numberText">60</div>
+    </div>
+    <div class="homeDivSections">
+        <div class="headerText">Answers by age group</div>
+        <div>
+            <!-- Replace with actual bar chart component -->
+            <svg width="100%" height="100">
+                <rect x="10" y="10" width="30" height="80" style="fill:blue" />
+                <rect x="50" y="30" width="30" height="60" style="fill:green" />
+                <rect x="90" y="50" width="30" height="40" style="fill:orange" />
+            </svg>
+        </div>
+    </div>
+    <div class="homeDivSections">
+        <div class="headerText">Answers by gender</div>
+        <div>
+            <!-- Replace with actual pie chart component -->
+            <svg width="100" height="100" viewBox="0 0 32 32">
+                <circle r="16" cx="16" cy="16" fill="orange"></circle>
+                <path d="M16 16 L16 0 A16 16 0 1 1 0 16 Z" fill="blue"></path>
+            </svg>
+        </div>
+    </div>
 
-Welcome to your new app.
+    <!-- Second row -->
+    <div class="mergedDiv">
+        <div>Build surveys easily with our survey app</div>
+        <img src="survey-pic.png" alt="Survey Illustration">
+    </div>
+</div>

@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\response.css"
     },
     {
+      "Id": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey-pic.png",
+      "PackagePath": "staticwebassets\\survey-pic.png"
+    },
+    {
       "Id": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey.css",
       "PackagePath": "staticwebassets\\survey.css"
     },

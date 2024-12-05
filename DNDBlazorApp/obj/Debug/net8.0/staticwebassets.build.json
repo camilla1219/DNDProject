@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Xu3jCKFdMcXqU60N3d5yd6+8xWQ3/QyWGN0ZdB+6YMk=",
+  "Hash": "LJE7943FoDNoocjh/XTtgP8ijB+pXDEcTn9tWRPZWcI=",
   "Source": "DNDBlazorApp",
   "BasePath": "_content/DNDBlazorApp",
   "Mode": "Default",
@@ -179,6 +179,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\response.css"
+    },
+    {
+      "Identity": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey-pic.png",
+      "SourceId": "DNDBlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "BasePath": "_content/DNDBlazorApp",
+      "RelativePath": "survey-pic.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\survey-pic.png"
     },
     {
       "Identity": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey.css",
