@@ -30,5 +30,21 @@
         "SelectedOption": "dsdbcsbjdhc"
       }
     ]
+  },
+  {
+    "Id": 0,
+    "SurveyId": 1,
+    "RespondentName": "Jacob",
+    "SubmittedAt": "2024-12-05T16:46:04.1947439Z",
+    "Answers": [
+      {
+        "QuestionId": 0,
+        "SelectedOption": "sbdjsdjd"
+      },
+      {
+        "QuestionId": 0,
+        "SelectedOption": "dsdbcsbjdhc"
+      }
+    ]
   }
 ]
