@@ -94,5 +94,21 @@
         "SelectedOption": "Dont need to?"
       }
     ]
+  },
+  {
+    "Id": 0,
+    "SurveyId": 4,
+    "RespondentName": "Jacob",
+    "SubmittedAt": "2024-12-06T08:26:36.2197376Z",
+    "Answers": [
+      {
+        "QuestionId": 1,
+        "SelectedOption": "Golden retriever"
+      },
+      {
+        "QuestionId": 2,
+        "SelectedOption": "Shitzu"
+      }
+    ]
   }
 ]

@@ -109,5 +109,33 @@
         ]
       }
     ]
+  },
+  {
+    "Id": 4,
+    "Title": "Dog Survey",
+    "Description": "Which dog breed do you like",
+    "Questions": [
+      {
+        "Id": 1,
+        "Text": "Which breed",
+        "Type": "MultipleChoice",
+        "Options": [
+          {
+            "Id": 1,
+            "Text": "German shepherd"
+          },
+          {
+            "Id": 2,
+            "Text": "Golden retriever"
+          }
+        ]
+      },
+      {
+        "Id": 2,
+        "Text": "Any other breeds you like?",
+        "Type": "ShortAnswer",
+        "Options": null
+      }
+    ]
   }
 ]
