@@ -9,4 +9,4 @@ Names of each group member :
 
 # Project Formulation & Requirements
 
-We describe our project and its requirements in the blogpost (.md file) [Project Formulation & Requirements](https://github.com/camilla1219/DNDProject/blob/main/Project%20Formulation%20%26%20Requirements.md) that you will find linked [here](https://github.com/camilla1219/DNDProject/blob/main/Project%20Formulation%20%26%20Requirements.md).
+We describe our project and its requirements in the blogpost (.md file) [Project Formulation & Requirements](https://github.com/camilla1219/DNDProject/blob/main/Developer%20blogs/Project%20Formulation%20%26%20Requirements.md) that you will find linked [here](https://github.com/camilla1219/DNDProject/blob/main/Developer%20blogs/Project%20Formulation%20%26%20Requirements.md).
