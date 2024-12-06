@@ -12,6 +12,8 @@ By examining these sections, we provide a clear picture of the project's scope, 
 
 Here you can look at the application in action: Check out our [Video Demonstration](https://youtu.be/C-qrX9fFd_A)
 
+Unfortunately our Github repository wont recognize some of the images we have used for our login, logout and Access denied pages.
+
 ## Final Development Update
 
 In order to finalize the project, small changes were made to enhance cohesiveness and presentation throughout the site as well as to enhance the user experience.

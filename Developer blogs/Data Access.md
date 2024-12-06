@@ -246,7 +246,7 @@ _fileService.SaveResponses(_responses);
   - SQLite serves as the database provider.
   - Key benefits include automated CRUD operations, secure querying, and schema migrations.
 
-  - **LINQ**:
+- **LINQ**:
 
   - LINQ is leveraged for both database and in-memory data manipulation.
   - Provides strong typing, compile-time checks, and SQL injection protection.
