@@ -7,35 +7,41 @@
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="nav flex-column">
-    <ul class="nav-list">
-        <li class="nav-item">
-            <a href="/" class="nav-link">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="/AnswerSurvey" class="nav-link">
-                <span class="oi oi-plus" aria-hidden="true"></span> Survey Answer
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="/createSurvey" class="nav-link">
-                <span class="oi oi-plus" aria-hidden="true"></span> Create Survey
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="/MySurveyMain" class="nav-link">
-                <span class="oi oi-magnifying-glass" aria-hidden="true"></span> My Surveys
-            </a>
-        </li>
-          <li class="nav-item">
-            <a href="/FindSurvey" class="nav-link">
-                <span class="oi oi-plus" aria-hidden="true"></span> View Responses
-            </a>
-        </li>
-    </ul>
-</nav>
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        <AuthorizeView Roles="Administrator,User">
+            <Authorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="answerSurvey">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Survey Answer
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="mySurveyMain">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> My Survey
+                    </NavLink>
+                </div>
+            </Authorized>
+        </AuthorizeView>
 
+        <AuthorizeView Roles="Administrator">
+            <Authorized>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="createSurvey">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Create Survey
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="viewResponsesMain">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> View Responses
+                    </NavLink>
+                </div>
+            </Authorized>
+        </AuthorizeView>
+    </nav>
 </div>
 

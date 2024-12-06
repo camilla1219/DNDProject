@@ -1,7 +1,9 @@
-﻿@page "/AnswerSurvey/{id:int}"
-@using WebAPI.models
+﻿@page "/answerSurvey/{id:int}"
+@using WebAPI.Models
 @using WebAPI.Services
+@using Microsoft.AspNetCore.Authorization
 @rendermode InteractiveServer
+@attribute [Authorize(Roles = "Administrator,User")]
 
 @inject FileService SurveyService
 @inject FileService ResponseService
@@ -39,9 +41,9 @@
                         {
                             <div>
                                 <input type="radio"
-                                       name="@($"question_{question.Id}")"
+                                       name="question_@question.Id"
                                        value="@option.Text"
-                                       @onchange="(e) => SetAnswer(question.Id, e.Value?.ToString())" />
+                                       @onchange="(e => SetAnswer(question.Id, e.Value?.ToString()))" />
                                 <label>@option.Text</label>
                             </div>
                         }
@@ -62,8 +64,8 @@
                     {
                         <input type="text"
                                placeholder="Type your answer here"
-                               @bind:get="@GetAnswer(question.Id)"
-                               @bind:set="(value) => SetAnswer(question.Id, value)" />
+                               value="@GetAnswer(question.Id)"
+                               @oninput="@(e => SetAnswer(question.Id, e.Value.ToString()))" />
                     }
                 </div>
             }
@@ -91,25 +93,26 @@
         survey = surveys.FirstOrDefault(s => s.Id == id);
     }
 
-    private string? GetAnswer(int questionId)
+   private string? GetAnswer(int questionId)
     {
-        return userAnswers.ContainsKey(questionId) ? userAnswers[questionId] : null;
+        return userAnswers.TryGetValue(questionId, out var answer) ? answer : null;
     }
+
 
     private void SetAnswer(int questionId, string? selectedOption)
     {
-        if (selectedOption != null)
+        if (!string.IsNullOrEmpty(selectedOption))
         {
             userAnswers[questionId] = selectedOption;
         }
     }
 
-    private bool IsOptionSelected(int questionId, string optionText)
+   private bool IsOptionSelected(int questionId, string optionText)
     {
-        return checkboxAnswers.ContainsKey(questionId) && checkboxAnswers[questionId].Contains(optionText);
+        return checkboxAnswers.TryGetValue(questionId, out var options) && options.Contains(optionText);
     }
 
-    private void ToggleCheckboxAnswer(int questionId, string optionText)
+     private void ToggleCheckboxAnswer(int questionId, string optionText)
     {
         if (!checkboxAnswers.ContainsKey(questionId))
         {
@@ -126,7 +129,7 @@
         }
     }
 
-    private async Task SubmitAnswers()
+     private async Task SubmitAnswers()
     {
         if (survey == null)
         {
@@ -161,7 +164,7 @@
             ResetForm();
 
             // Navigate back to the main survey page
-            Navigation.NavigateTo("/AnswerSurvey");
+            Navigation.NavigateTo("/answerSurvey");
         }
         catch (Exception ex)
         {

@@ -1,4 +1,4 @@
-namespace WebAPI.models
+namespace WebAPI.Models
 {
     public class Survey
     {

@@ -1,7 +1,9 @@
 @page "/createSurvey"
+@using Microsoft.AspNetCore.Authorization
 @rendermode InteractiveServer
+@attribute [Authorize(Roles = "Administrator")]
 
-@using WebAPI.models
+@using WebAPI.Models
 @using WebAPI.Services
 
 @inject FileService SurveyService
@@ -40,22 +42,27 @@
                     @if (question.Type == "MultipleChoice" || question.Type == "Checkboxes")
                     {
                         <div class="options">
-                            @foreach (var option in question.Options)
-                            {
-                                <div>
-                                    @if (question.Type == "MultipleChoice")
-                                    {
-                                        <input type="radio" disabled />
-                                    }
-                                    else if (question.Type == "Checkboxes")
-                                    {
-                                        <input type="checkbox" disabled />
-                                    }
-                                    <input type="text" placeholder="Enter Option" 
-                                           @bind="option.Text" @bind:event="oninput" />
-                                    <button @onclick="() => RemoveOption(question, option.Id)">X</button>
-                                </div>
-                            }
+                           @foreach (var option in question.Options)
+{
+    <div>
+        @if (question.Type == "MultipleChoice")
+        {
+            <input type="radio" disabled />
+        }
+        else if (question.Type == "Checkboxes")
+        {
+            <input type="checkbox" disabled />
+        }
+
+        <!-- Clear the "New Option" text when user starts typing -->
+        <input type="text" placeholder="Enter Option" 
+               @bind="option.Text" 
+               @bind:event="oninput" 
+               @onfocus="() => ClearOptionPlaceholder(option)" />
+
+        <button @onclick="() => RemoveOption(question, option.Id)">X</button>
+    </div>
+}   
                             <button @onclick="() => AddOption(question)" class="add-option-btn">Add Option</button>
                         </div>
                     }
@@ -126,14 +133,17 @@
     }
 
     private void AddQuestion()
+{
+    int nextQuestionId = questions.Any() ? questions.Max(q => q.Id) + 1 : 1; 
+    questions.Add(new Question
     {
-        questions.Add(new Question
-        {
-            Text = "",
-            Type = selectedQuestionType,
-            Options = selectedQuestionType == "ShortAnswer" ? null : new List<Option>()
-        });
-    }
+        Id = nextQuestionId, 
+        Text = "",
+        Type = selectedQuestionType,
+        Options = selectedQuestionType == "ShortAnswer" ? null : new List<Option>()
+    });
+}
+
 
     private void AddOption(Question question)
     {
@@ -154,5 +164,14 @@
     private void RemoveQuestion(Question question)
     {
         questions.Remove(question);
+    }
+
+    private void ClearOptionPlaceholder(Option option)
+    {
+   
+    if (option.Text == "New Option")
+    {
+        option.Text = string.Empty;
+    }
     }
 }

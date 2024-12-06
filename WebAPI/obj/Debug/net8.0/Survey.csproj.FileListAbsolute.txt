@@ -787,3 +787,6 @@ C:\Users\jacob\Documents\GitHub\DNDProject\WebAPI\obj\Debug\net8.0\refint\Survey
 C:\Users\jacob\Documents\GitHub\DNDProject\WebAPI\obj\Debug\net8.0\Survey.pdb
 C:\Users\jacob\Documents\GitHub\DNDProject\WebAPI\obj\Debug\net8.0\Survey.genruntimeconfig.cache
 C:\Users\jacob\Documents\GitHub\DNDProject\WebAPI\obj\Debug\net8.0\ref\Survey.dll
+C:\Users\jacob\Documents\GitHub\DNDProject\WebAPI\bin\Debug\net8.0\Survey.staticwebassets.endpoints.json
+C:\Users\jacob\Documents\GitHub\DNDProject\WebAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\jacob\Documents\GitHub\DNDProject\WebAPI\obj\Debug\net8.0\staticwebassets\msbuild.Survey.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

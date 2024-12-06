@@ -1,15 +1,13 @@
-@page "/MySurveyMain"
-@inject NavigationManager Navigation
-@using WebAPI.models
+@page "/mySurveyMain"
+@using Microsoft.AspNetCore.Authorization
+@using WebAPI.Models
 @using WebAPI.Services
-@inject FileService SurveyService
+@inject NavigationManager Navigation
 @rendermode InteractiveServer
+@inject FileService SurveyService
+@attribute [Authorize(Roles = "Administrator,User")]
 
 <PageTitle>Find Survey</PageTitle>
-
-<head>
-    <link href="Main.css" rel="stylesheet" />
-</head>
 
 <div class="container">
     <h3>Find Your Survey</h3>
@@ -18,9 +16,9 @@
 </div>
 
 @code {
-    private string surveyTitle = ""; // Bind the input field for the survey title
+    private string surveyTitle = "";
 
-    private void GoToSurvey()
+private void GoToSurvey()
     {
         // Search surveys by title (case-insensitive)
         var survey = SurveyService.LoadSurveys()
@@ -36,4 +34,6 @@
             Console.WriteLine("Survey not found with the provided title.");
         }
     }
+
+
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LJE7943FoDNoocjh/XTtgP8ijB+pXDEcTn9tWRPZWcI=",
+  "Hash": "xihkXjJ9axDZiB5NRteMoUDCwIGYs74RvKic27nHg7I=",
   "Source": "DNDBlazorApp",
   "BasePath": "_content/DNDBlazorApp",
   "Mode": "Default",
@@ -34,7 +34,7 @@
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "DNDBlazorApp.styles.css",
+      "RelativePath": "DNDBlazorApp#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -43,6 +43,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "55apa51y4g",
+      "Integrity": "Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DNDBlazorApp.styles.css"
@@ -53,7 +55,7 @@
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "DNDBlazorApp.bundle.scp.css",
+      "RelativePath": "DNDBlazorApp#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -62,6 +64,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "55apa51y4g",
+      "Integrity": "Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DNDBlazorApp.bundle.scp.css"
@@ -72,15 +76,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "app.css",
+      "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "da95v2qkru",
+      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
@@ -91,15 +97,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "bootstrap/bootstrap.min.css",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "6gzpyzhau4",
+      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
@@ -110,15 +118,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "bootstrap/bootstrap.min.css.map",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
@@ -129,18 +139,83 @@
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "favicon.png",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\images\\accessDenied.png",
+      "SourceId": "DNDBlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "BasePath": "_content/DNDBlazorApp",
+      "RelativePath": "images/accessDenied#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fajrzsd7lf",
+      "Integrity": "Zx2XHi1us7dSALCze6sRuWxJ9jfkMQMpCi4yzz1FwuA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\accessDenied.png"
+    },
+    {
+      "Identity": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\images\\avatar.png",
+      "SourceId": "DNDBlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "BasePath": "_content/DNDBlazorApp",
+      "RelativePath": "images/avatar#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sg8mcklra4",
+      "Integrity": "XECv5ZjBMg5Y4WTd1f1XjHdh1W5enX38tjle0GJRWiI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\avatar.png"
+    },
+    {
+      "Identity": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\images\\logout.png",
+      "SourceId": "DNDBlazorApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
+      "BasePath": "_content/DNDBlazorApp",
+      "RelativePath": "images/logout#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0en5x1eufj",
+      "Integrity": "WDV6W8B3bjaW4nKrTe6jPKe+RCSxieiJGkRILKA0OBc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logout.png"
     },
     {
       "Identity": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\Main.css",
@@ -148,15 +223,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "Main.css",
+      "RelativePath": "Main#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "55u88vmbgk",
+      "Integrity": "Z7E6cHrVY+WqlbzBbkAWBM5h5c4oYs3n1y1XIPfmBYM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Main.css"
@@ -167,37 +244,20 @@
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "response.css",
+      "RelativePath": "response#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "ue1lli9ueh",
+      "Integrity": "mjhS799pBNHk1Z6E+CXmRnckiiFG0laJK577JGI/pcc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\response.css"
-    },
-    {
-      "Identity": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey-pic.png",
-      "SourceId": "DNDBlazorApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
-      "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "survey-pic.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\survey-pic.png"
     },
     {
       "Identity": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey.css",
@@ -205,18 +265,1006 @@
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\",
       "BasePath": "_content/DNDBlazorApp",
-      "RelativePath": "survey.css",
+      "RelativePath": "survey#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "7as69mwful",
+      "Integrity": "r1UvCEZ6R3V0b1bsoo8jGEGiXgJNxjMJh20z9K4csRQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\survey.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "app.da95v2qkru.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da95v2qkru"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 03:16:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6gzpyzhau4"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 03:16:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "DNDBlazorApp.55apa51y4g.bundle.scp.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DNDBlazorApp.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5907"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Dec 2024 20:37:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "55apa51y4g"
+        },
+        {
+          "Name": "label",
+          "Value": "DNDBlazorApp.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14="
+        }
+      ]
+    },
+    {
+      "Route": "DNDBlazorApp.55apa51y4g.styles.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DNDBlazorApp.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5907"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Dec 2024 20:37:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "55apa51y4g"
+        },
+        {
+          "Name": "label",
+          "Value": "DNDBlazorApp.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14="
+        }
+      ]
+    },
+    {
+      "Route": "DNDBlazorApp.bundle.scp.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DNDBlazorApp.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5907"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Dec 2024 20:37:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14="
+        }
+      ]
+    },
+    {
+      "Route": "DNDBlazorApp.styles.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\DNDBlazorApp.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5907"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Dec 2024 20:37:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z/LAUnEwcd6lGVhnqtp6jjAZhqSXZOXrqmnj4CWXn14="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "images/accessDenied.fajrzsd7lf.png",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\images\\accessDenied.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16314"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Zx2XHi1us7dSALCze6sRuWxJ9jfkMQMpCi4yzz1FwuA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fajrzsd7lf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/accessDenied.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Zx2XHi1us7dSALCze6sRuWxJ9jfkMQMpCi4yzz1FwuA="
+        }
+      ]
+    },
+    {
+      "Route": "images/accessDenied.png",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\images\\accessDenied.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16314"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Zx2XHi1us7dSALCze6sRuWxJ9jfkMQMpCi4yzz1FwuA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Zx2XHi1us7dSALCze6sRuWxJ9jfkMQMpCi4yzz1FwuA="
+        }
+      ]
+    },
+    {
+      "Route": "images/avatar.png",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\images\\avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27518"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XECv5ZjBMg5Y4WTd1f1XjHdh1W5enX38tjle0GJRWiI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XECv5ZjBMg5Y4WTd1f1XjHdh1W5enX38tjle0GJRWiI="
+        }
+      ]
+    },
+    {
+      "Route": "images/avatar.sg8mcklra4.png",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\images\\avatar.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27518"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XECv5ZjBMg5Y4WTd1f1XjHdh1W5enX38tjle0GJRWiI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sg8mcklra4"
+        },
+        {
+          "Name": "label",
+          "Value": "images/avatar.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XECv5ZjBMg5Y4WTd1f1XjHdh1W5enX38tjle0GJRWiI="
+        }
+      ]
+    },
+    {
+      "Route": "images/logout.0en5x1eufj.png",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\images\\logout.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12059"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WDV6W8B3bjaW4nKrTe6jPKe+RCSxieiJGkRILKA0OBc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0en5x1eufj"
+        },
+        {
+          "Name": "label",
+          "Value": "images/logout.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WDV6W8B3bjaW4nKrTe6jPKe+RCSxieiJGkRILKA0OBc="
+        }
+      ]
+    },
+    {
+      "Route": "images/logout.png",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\images\\logout.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12059"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WDV6W8B3bjaW4nKrTe6jPKe+RCSxieiJGkRILKA0OBc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WDV6W8B3bjaW4nKrTe6jPKe+RCSxieiJGkRILKA0OBc="
+        }
+      ]
+    },
+    {
+      "Route": "Main.55u88vmbgk.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\Main.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3981"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z7E6cHrVY+WqlbzBbkAWBM5h5c4oYs3n1y1XIPfmBYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "55u88vmbgk"
+        },
+        {
+          "Name": "label",
+          "Value": "Main.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z7E6cHrVY+WqlbzBbkAWBM5h5c4oYs3n1y1XIPfmBYM="
+        }
+      ]
+    },
+    {
+      "Route": "Main.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\Main.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3981"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z7E6cHrVY+WqlbzBbkAWBM5h5c4oYs3n1y1XIPfmBYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z7E6cHrVY+WqlbzBbkAWBM5h5c4oYs3n1y1XIPfmBYM="
+        }
+      ]
+    },
+    {
+      "Route": "response.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\response.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mjhS799pBNHk1Z6E+CXmRnckiiFG0laJK577JGI/pcc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mjhS799pBNHk1Z6E+CXmRnckiiFG0laJK577JGI/pcc="
+        }
+      ]
+    },
+    {
+      "Route": "response.ue1lli9ueh.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\response.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mjhS799pBNHk1Z6E+CXmRnckiiFG0laJK577JGI/pcc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ue1lli9ueh"
+        },
+        {
+          "Name": "label",
+          "Value": "response.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mjhS799pBNHk1Z6E+CXmRnckiiFG0laJK577JGI/pcc="
+        }
+      ]
+    },
+    {
+      "Route": "survey.7as69mwful.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r1UvCEZ6R3V0b1bsoo8jGEGiXgJNxjMJh20z9K4csRQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7as69mwful"
+        },
+        {
+          "Name": "label",
+          "Value": "survey.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r1UvCEZ6R3V0b1bsoo8jGEGiXgJNxjMJh20z9K4csRQ="
+        }
+      ]
+    },
+    {
+      "Route": "survey.css",
+      "AssetFile": "C:\\Users\\jacob\\Documents\\GitHub\\DNDProject\\DNDBlazorApp\\wwwroot\\survey.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r1UvCEZ6R3V0b1bsoo8jGEGiXgJNxjMJh20z9K4csRQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 02:56:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r1UvCEZ6R3V0b1bsoo8jGEGiXgJNxjMJh20z9K4csRQ="
+        }
+      ]
     }
   ]
 }

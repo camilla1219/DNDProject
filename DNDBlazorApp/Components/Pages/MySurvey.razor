@@ -1,7 +1,9 @@
-@page "/MySurvey/{id:int}"
-@using WebAPI.models
+@page "/mySurvey/{id:int}"
+@using WebAPI.Models
 @using WebAPI.Services
+@using Microsoft.AspNetCore.Authorization
 @rendermode InteractiveServer
+@attribute [Authorize(Roles = "Administrator,User")]
 
 @inject FileService SurveyService
 
@@ -52,6 +54,7 @@
                     else if (question.Type == "ShortAnswer")
                     {
                         <p>@(question.Options?.FirstOrDefault()?.Text ?? "No options provided.")</p>
+
                     }
                 </div>
             }
@@ -65,7 +68,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Load the survey by ID as usual, since now we are passing the ID in the URL
         var surveys = SurveyService.LoadSurveys();
         survey = surveys.FirstOrDefault(s => s.Id == id);
     }

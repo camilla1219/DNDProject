@@ -1,6 +1,9 @@
-@page "/ViewResponses/{id:int}"
-@using WebAPI.models
+@page "/viewResponses/{id:int}"
+@using WebAPI.Models
 @using WebAPI.Services
+@using Microsoft.AspNetCore.Authorization
+@rendermode InteractiveServer
+@attribute [Authorize(Roles = "Administrator")]
 @inject FileService ResponseService
 @inject FileService SurveyService
 
@@ -33,6 +36,7 @@
                             <ul>
                                 @foreach (var answer in response.Answers)
                                 {
+                                    var questionText = survey?.Questions.FirstOrDefault(q => q.Id == answer.QuestionId)?.Text ?? "Unknown Question";
                                     <li>@answer.QuestionId: @answer.SelectedOption</li>
                                 }
                             </ul>

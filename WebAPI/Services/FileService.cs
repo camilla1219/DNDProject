@@ -1,5 +1,5 @@
 using System.Text.Json;
-using WebAPI.models;
+using WebAPI.Models;
 
 namespace WebAPI.Services
 {

@@ -1,0 +1,90 @@
+﻿@page "/Register"
+
+@using System.ComponentModel.DataAnnotations
+@using DNDBlazorApp.Components.Shared
+@using DNDBlazorApp.Data
+@using DNDBlazorApp.Models.Entities
+@using DNDBlazorApp.Services
+
+@inject UserService userService
+
+@rendermode InteractiveServer
+
+<h1>Register</h1>
+<div class="row">
+    <div class="col-md-4">
+
+        <Alert @ref="alert" />
+        <section>
+            <EditForm Model="Input" OnValidSubmit="RegisterUser">
+                <DataAnnotationsValidator />
+                <ValidationSummary class="text-danger" />
+                <hr />
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="Input.Email" id="Email" class="form-control" aria-required="true" />
+                    <label for="Email" class="form-label">Email</label>
+                    <ValidationMessage For="@(() => Input.Email)" class="text-danger" />
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText type="password" @bind-Value="Input.Password" id="password" class="form-control" aria-required="true" />
+                    <label for="password" class="form-label">Password</label>
+                    <ValidationMessage For="@(() => Input.Password)" class="text-danger" />
+                </div>
+                <div class="form-floating mb-3">
+                    <InputSelect @bind-Value="Input.Role" id="role" class="form-select" aria-required="true">
+                        <option value="">Select a Role</option>
+                        <option value="Administrator">User</option>
+                        <option value="User">Guest</option>
+                    </InputSelect>
+                    <label for="role" class="form-label">Role</label>
+                    <ValidationMessage For="@(() => Input.Role)" class="text-danger" />
+                </div>
+                <div>
+                    <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+                </div>
+            </EditForm>
+        </section>
+    </div>
+</div>
+
+@code {
+    private Alert alert;
+
+    private InputModel Input { get; set; } = new();
+
+    private void RegisterUser()
+    {
+        bool result = userService.SaveUser(new UserAccount
+        {
+            Email = Input.Email,
+            Password = Input.Password,
+            Role = Input.Role
+        });
+
+        if (result)
+        {
+            // Register success
+            alert.ShowSuccess("Register Successfully");
+        }
+        else
+        {
+            // Register failed
+            alert.ShowFailed("Register Failed!");
+        }
+    }
+
+    private sealed class InputModel
+    {
+        [Required]
+        [EmailAddress] 
+        public string Email { get; set; } = "";
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; } = "";
+
+        [Required]
+        [DataType(DataType.Text)]
+        public string Role { get; set; } = "";
+    }
+}

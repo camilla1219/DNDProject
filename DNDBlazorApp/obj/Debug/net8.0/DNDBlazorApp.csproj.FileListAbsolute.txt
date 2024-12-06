@@ -870,3 +870,7 @@ C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\refint\
 C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.pdb
 C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\DNDBlazorApp.genruntimeconfig.cache
 C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\ref\DNDBlazorApp.dll
+C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp\bin\Debug\net8.0\Survey.staticwebassets.endpoints.json
+C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp\bin\Debug\net8.0\DNDBlazorApp.staticwebassets.endpoints.json
+C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\jacob\Documents\GitHub\DNDProject\DNDBlazorApp\obj\Debug\net8.0\staticwebassets\msbuild.DNDBlazorApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
