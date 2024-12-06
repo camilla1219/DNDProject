@@ -37,12 +37,12 @@ Due to errors in the main branch that couldn't be fixed, only **JacobEBS** could
 ### Data Access
 
 - **Contributors**: sonerrms, camilla1219, JacobEBS, liamDND
-- **Markdown File**: sonerrms
+- **Markdown File**: sonerrms, Ahmanniha
 
 ### Project Conclusion & Demonstration
 
 - **Contributors**: camilla1219, JacobEBS, liamDND, Ahmanniha, sonerrms
-- **Markdown Files**: liamDND, Ahmanniha, JacobEBS
+- **Markdown Files**: liamDND, camilla1219
 
 ---
 
