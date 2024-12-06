@@ -103,7 +103,7 @@ All in all, the project produced a full-fledged survey platform that allows user
 - **Status**: Not Fully Implemented
 - **Details**:
 
-  - No functionality for setting expiration dates or manually closing surveys is found.
+  - No functionality for setting expiration dates or manually closing surveys is implemented.
 
 ## Summary of Achieved Requirements:
 
